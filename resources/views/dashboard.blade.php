@@ -70,12 +70,14 @@
         <div class="flex justify-between items-center mb-4">
             <h2 class="text-lg font-bold text-gray-800">Recent Bookings</h2>
             <div class="flex space-x-2">
-                <select class="bg-gray-100 border border-gray-300 rounded-lg px-3 py-2" id="booking-status-filter">
-                    <option value="all">All Status</option>
-                    <option value="confirmed">Confirmed</option>
-                    <option value="pending">Pending</option>
-                    <option value="cancelled">Cancelled</option>
+            <form id="filter-form" method="GET" action="{{ route('bookings.index') }}">
+            <select name="status" class="bg-gray-100 border border-gray-300 rounded-lg px-3 py-2" id="booking-status-filter" onchange="document.getElementById('filter-form').submit()">                    
+            <option value="all" {{ request('status') === 'all' ? 'selected' : '' }}>All Status</option>
+            <option value="confirmed" {{ request('status') === 'confirmed' ? 'selected' : '' }}>Confirmed</option>
+            <option value="pending" {{ request('status') === 'pending' ? 'selected' : '' }}>Pending</option>
+            <option value="cancelled" {{ request('status') === 'cancelled' ? 'selected' : '' }}>Cancelled</option>
                 </select>
+                </form>
                 <button class="bg-gray-100 px-3 py-2 rounded-lg">
                     <i class="fas fa-filter"></i>
                 </button>

@@ -30,7 +30,7 @@ class ReviewController extends Controller
                 ->orWhere('status', 'like', '%' . $search . '%');
             })
             ->with(['user', 'booking']) // للتأكد من تحميل علاقة المستخدم والحجز
-            ->paginate(10); // التصفح عبر الصفحات
+            ->paginate(5); // التصفح عبر الصفحات
 
         // إرجاع العرض مع البيانات
         return view('reviews.index', compact('reviews', 'search'));

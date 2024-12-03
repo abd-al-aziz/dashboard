@@ -14,6 +14,7 @@ class Pet extends Model
         'name',
         'type',
         'breed',
+        'image',
         'age',
         'special_needs',
     ];

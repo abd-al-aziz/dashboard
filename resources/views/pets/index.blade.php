@@ -29,6 +29,7 @@
         <thead class="bg-gray-200">
             <tr>
                 <th class="px-4 py-2 text-gray-800">Pet Name</th>
+                <th class="px-4 py-2 text-gray-800">Image</th>
                 <th class="px-4 py-2 text-gray-800">Type</th>
                 <th class="px-4 py-2 text-gray-800">Breed</th>
                 <th class="px-4 py-2 text-gray-800">Age</th>
@@ -40,19 +41,24 @@
             @foreach($pets as $pet)
                 <tr class="hover:bg-gray-50">
                     <td class="px-4 py-2 text-gray-700">{{ $pet->name }}</td>
+                    <td class="px-4 py-2 text-gray-700">
+                        <img src="{{ asset('storage/' . $pet->image) }}" alt="Pet Image" class="w-16 h-16 rounded-md">
+                    </td>
                     <td class="px-4 py-2 text-gray-700">{{ $pet->type }}</td>
                     <td class="px-4 py-2 text-gray-700">{{ $pet->breed }}</td>
                     <td class="px-4 py-2 text-gray-700">{{ $pet->age }}</td>
                     <td class="px-4 py-2 text-gray-700">{{ $pet->special_needs }}</td>
                     <td class="px-4 py-2">
                         <!-- Edit button -->
-                        <a href="{{ route('pets.edit', $pet->id) }}" class="text-blue-500 hover:underline">Edit</a>
+                        <a href="{{ route('pets.edit', $pet->id) }}" class="bg-yellow-500 text-white px-2 py-1 me-4 rounded-md hover:bg-yellow-600 transition"><i class="bi bi-pencil-square"></i></a>
 
                         <!-- Delete button -->
                         <form method="POST" action="{{ route('pets.destroy', $pet->id) }}" class="inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="text-red-500 hover:underline ml-4" onclick="return confirm('Are you sure you want to delete this pet?')">Delete</button>
+                            <button type="submit" class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600 transition" onclick="return confirm('Are you sure you want to delete this pet?')">
+                                <i class="bi bi-trash"></i>
+                            </button>
                         </form>
                     </td>
                 </tr>

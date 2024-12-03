@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Booking;
+use App\Models\Pet;
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -15,30 +17,32 @@ class BookingController extends Controller
      */
     public function index(Request $request)
     {
+        
         // استلام كلمة البحث من المستخدم
         $search = $request->input('search');
+        $status = $request->input('status', 'all');
         
         // استعلام لجلب الحجوزات مع دعم البحث في user, pet, room, status
         $bookings = Booking::query()
             ->when($search, function ($query, $search) {
-                // البحث بناءً على user (اسم المستخدم)
+                
                 $query->whereHas('user', function ($q) use ($search) {
                     $q->where('name', 'like', '%' . $search . '%');
                 })
-                // البحث بناءً على pet (اسم الحيوان الأليف)
+                
                 ->orWhereHas('pet', function ($q) use ($search) {
                     $q->where('name', 'like', '%' . $search . '%');
                 })
-                // البحث بناءً على room (اسم الغرفة)
+                
                 ->orWhereHas('room', function ($q) use ($search) {
                     $q->where('name', 'like', '%' . $search . '%');
                 })
-                // البحث بناءً على status (الحالة)
+        
                 ->orWhere('status', 'like', '%' . $search . '%');
             })
             // تحميل العلاقات الخاصة بالـ user, pet, room
             ->with(['user', 'pet', 'room'])
-            ->paginate(10);
+            ->paginate(5);
 
         // إرجاع العرض مع البيانات
         return view('bookings.index', compact('bookings', 'search'));
@@ -51,7 +55,10 @@ class BookingController extends Controller
      */
     public function create()
     {
-        return view('bookings.create');
+
+        $pets= Pet::all();
+        $rooms= Room::all();
+        return view('bookings.create' , compact('pets', 'rooms'));
     }
 
     /**
@@ -70,9 +77,10 @@ class BookingController extends Controller
             'end_date' => 'required|date|after:start_date',
             'status' => 'required|string|in:pending,confirmed,cancelled',
         ]);
-
+        
         // إنشاء حجز جديد
         Booking::create($request->all());
+        session()->flash('success', 'Booking created successfully!');
 
         return redirect()->route('bookings.index')->with('success', 'Booking created successfully!');
     }
@@ -110,6 +118,20 @@ class BookingController extends Controller
         $booking->update($request->all());
 
         return redirect()->route('bookings.index')->with('success', 'Booking updated successfully!');
+    }
+    public function updateStatus(Request $request, $id)
+    {
+        // التحقق من المدخلات
+        $request->validate([
+            'status' => 'required|string|in:pending,confirmed,completed,cancelled',
+        ]);
+
+        // جلب الحجز وتحديث حالته
+        $booking = Booking::findOrFail($id);
+        $booking->update(['status' => $request->status]);
+
+        // إعادة التوجيه مع رسالة نجاح
+        return redirect()->route('bookings.index')->with('success', 'Booking status updated successfully!');
     }
 
     /**

@@ -24,7 +24,7 @@ class UserController extends Controller
                 $query->where('name', 'like', '%' . $search . '%')
                       ->orWhere('email', 'like', '%' . $search . '%');
             })
-            ->paginate(10); // التصفح عبر الصفحات
+            ->paginate(5); // التصفح عبر الصفحات
 
         // إرجاع العرض مع البيانات
         return view('users.index', compact('users', 'search'));

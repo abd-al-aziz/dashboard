@@ -13,21 +13,22 @@ class AdminAuthController extends Controller
     }
 
     public function login(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
+{
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required',
+    ]);
 
-        if (Auth::guard('admin')->attempt($credentials)) {
-            return redirect()->route('admin.dashboard');
-        }
+    $credentials = $request->only('email', 'password');
 
-        return back()->withErrors([
-            'email' => 'Invalid credentials.',
-        ]);
+    if (Auth::guard('admin')->attempt($credentials)) {
+        $request->session()->regenerate(); // تجديد الجلسة بعد تسجيل الدخول
+        return redirect()->route('admin.dashboard');
     }
 
-    public function logout()
-    {
-        Auth::guard('admin')->logout();
-        return redirect()->route('admin.login');
-    }
+    return back()->withErrors([
+        'email' => 'Invalid credentials.',
+    ])->withInput($request->except('password'));
 }
+}
+

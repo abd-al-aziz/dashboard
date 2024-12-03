@@ -25,7 +25,7 @@ class RoomController extends Controller
                     ->orWhere('type', 'like', '%' . $search . '%')
                     ->orWhere('description', 'like', '%' . $search . '%');
             })
-            ->paginate(10); // التصفح عبر الصفحات
+            ->paginate(5); // التصفح عبر الصفحات
 
         // إرجاع العرض مع البيانات
         return view('rooms.index', compact('rooms', 'search'));

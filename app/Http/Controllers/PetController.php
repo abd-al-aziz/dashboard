@@ -26,7 +26,7 @@ class PetController extends Controller
                     ->orWhere('breed', 'like', '%' . $search . '%')
                     ->orWhere('special_needs', 'like', '%' . $search . '%');
             })
-            ->paginate(10); // التصفح عبر الصفحات
+            ->paginate(4); // التصفح عبر الصفحات
 
         // إرجاع العرض مع البيانات
         return view('pets.index', compact('pets', 'search'));
@@ -55,19 +55,25 @@ class PetController extends Controller
             'name' => 'required|string|max:255',
             'type' => 'required|string|max:255',
             'breed' => 'required|string|max:255',
-            'age' => 'required|numeric|min:0',
+            'age' => 'required|integer|min:0',
             'special_needs' => 'nullable|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
+        // تجهيز البيانات
+        $data = $validated;
+        $data['user_id'] = auth()->id(); // تعيين المستخدم الحالي
+
+        // التحقق من وجود ملف صورة ورفعه
+        if ($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('pets', 'public'); // رفع الصورة إلى مجلد "pets" داخل التخزين العام
+        }else {
+            $data['image'] = null;
+        }
+        // dd($request->hasFile('image'));
+
         // إنشاء حيوان أليف جديد
-        Pet::create([
-            'name' => $request->name,
-            'type' => $request->type,
-            'breed' => $request->breed,
-            'age' => $request->age,
-            'special_needs' => $request->special_needs,
-            'user_id' => auth()->id(), // تعيين المستخدم الحالي
-        ]);
+        Pet::create($data);
 
         // إعادة التوجيه إلى صفحة القائمة مع رسالة نجاح
         return redirect()->route('pets.index')->with('success', 'Pet added successfully.');
@@ -98,7 +104,7 @@ class PetController extends Controller
             'name' => 'required|string|max:255',
             'type' => 'required|string|max:255',
             'breed' => 'required|string|max:255',
-            'age' => 'required|numeric|min:0',
+            'age' => 'required|integer|min:0',
             'special_needs' => 'nullable|string',
         ]);
 

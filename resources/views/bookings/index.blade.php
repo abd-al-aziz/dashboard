@@ -19,14 +19,14 @@
         </form>
 
         <!-- زر إضافة حجز جديد -->
-        <a href="{{ route('bookings.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-            Add New Booking
-        </a>
+        <div class="mb-4">
+            <a href="{{ route('bookings.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Add New Booking</a>
+        </div>
     </div>
 
     <!-- عرض الرسائل الناجحة -->
     @if(session('success'))
-        <div class="bg-green-100 text-green-800 p-4 rounded-lg mb-4">
+        <div class="bg-green-500 text-green-800 px-4 py-2 rounded-lg mb-4">
             {{ session('success') }}
         </div>
     @endif
@@ -52,13 +52,23 @@
                     <td class="px-4 py-2 text-gray-700">{{ $booking->room->name }}</td>
                     <td class="px-4 py-2 text-gray-700">{{ $booking->start_date }}</td>
                     <td class="px-4 py-2 text-gray-700">{{ $booking->end_date }}</td>
-                    <td class="px-4 py-2 text-gray-700">{{ ucfirst($booking->status) }}</td>
+                    <td class="px-4 py-2 text-gray-700">
+                        <form method="POST" action="{{ route('bookings.updateStatus', ['id' => $booking->id]) }}">
+                            @csrf
+                            <select name="status" class="bg-gray-100 border border-gray-300 rounded-lg px-2 py-1" onchange="this.form.submit()">
+                                <option value="pending" {{ $booking->status === 'pending' ? 'selected' : '' }}>Pending</option>
+                                <option value="confirmed" {{ $booking->status === 'confirmed' ? 'selected' : '' }}>Confirmed</option>
+                                <option value="completed" {{ $booking->status === 'completed' ? 'selected' : '' }}>Completed</option>
+                                <option value="cancelled" {{ $booking->status === 'cancelled' ? 'selected' : '' }}>Cancelled</option>
+                            </select>
+                        </form>
+                    </td>
                     <td class="px-4 py-2">
-                        <a href="{{ route('bookings.edit', $booking->id) }}" class="text-blue-500 hover:underline">Edit</a>
+                        <a href="{{ route('bookings.edit', $booking->id) }}" class="bg-yellow-500 text-white px-2 py-1 me-4 rounded-md hover:bg-yellow-600 transition"><i class="bi bi-pencil-square"></i></a>
                         <form method="POST" action="{{ route('bookings.destroy', $booking->id) }}" style="display:inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="text-red-500 hover:underline">Delete</button>
+                            <button type="submit" class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600 transition"><i class="bi bi-trash"></i></button>
                         </form>
                     </td>
                 </tr>

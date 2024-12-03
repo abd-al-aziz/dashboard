@@ -5,21 +5,23 @@
         <h1 class="text-2xl font-bold">Reviews</h1>
         
         <!-- نموذج البحث -->
-        <form action="{{ route('reviews.index') }}" method="GET" class="flex items-center space-x-4">
-            <input 
-                type="text" 
-                name="search" 
-                value="{{ old('search', $search) }}" 
-                placeholder="Search by user, booking ID, rating, or status" 
-                class="px-4 py-2 border rounded-lg" 
-            />
+        <form action="{{ route('reviews.index') }}" method="GET" class="mb-4">
+            <input type="text" name="search" value="{{ old('search', $search) }}" placeholder="Search by user" class="px-4 py-2 border rounded-lg">
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Search</button>
         </form>
 
+        @if(session('success'))
+        <div class="bg-green-100 text-green-800 p-4 rounded-lg mb-4">
+            {{ session('success') }}
+        </div>
+        @endif
+
         <!-- زر إضافة مراجعة جديدة -->
+        <div class="mb-4">
         <a href="{{ route('reviews.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
             Add Review
         </a>
+        </div>
     </div>
 
     @if($reviews->count() > 0)

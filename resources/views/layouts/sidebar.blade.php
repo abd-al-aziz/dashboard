@@ -36,10 +36,7 @@
                     <i class="fas fa-users"></i>
                     <span>Customers</span>
                 </a>
-                <a href="#" class="flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-gray-100">
-                    <i class="fas fa-cog"></i>
-                    <span>Settings</span>
-                </a>
+                
             </nav>
             <div class="absolute bottom-0 w-64 p-4 border-t border-gray-200">
               <form method="POST" action="{{ route('logout') }}">

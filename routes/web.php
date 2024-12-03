@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -8,11 +9,13 @@ use App\Http\Controllers\PetController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ServiceController;
 
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
@@ -30,6 +33,7 @@ Route::delete('/bookings/destroy/{id}', [BookingController::class, 'destroy'])->
 Route::get('/bookings/edit/{booking}', [BookingController::class, 'edit'])->name('bookings.edit');
 Route::put('/bookings/{booking}', [BookingController::class, 'update'])->name('bookings.update');
 Route::resource('pets', PetController::class)->middleware('auth');
+Route::post('/bookings/{id}/update-status', [BookingController::class, 'updateStatus'])->name('bookings.updateStatus');
 
 Route::middleware('auth')->group(function () {
     Route::get('/rooms/create', [RoomController::class, 'create'])->name('rooms.create');
@@ -39,7 +43,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/rooms/{room}', [RoomController::class, 'update'])->name('rooms.update'); // هذا هو روت التحديث
     Route::delete('/rooms/{room}', [RoomController::class, 'destroy'])->name('rooms.destroy');
 });
-
+//reviews routes
 Route::middleware('auth')->group(function () {
     Route::get('/reviews/create', [ReviewController::class, 'create'])->name('reviews.create');
     Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
@@ -54,12 +58,23 @@ Route::post('/users', [UserController::class, 'store'])->name('users.store');
 Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
 
 Route::prefix('admin')->group(function () {
-    // مسارات تسجيل الدخول والخروج
-    Route::get('login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
-    Route::post('login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
+    Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
     Route::post('logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
-    // مسارات لوحة التحكم
+    
+
+    // User Login Routes
+    Route::get('/login', [UserAuthController::class, 'showLoginForm'])->name('user.login');
+    Route::post('/login', [UserAuthController::class, 'login']);
+    Route::post('/logout', [UserAuthController::class, 'logout'])->name('user.logout');
+
+    Route::middleware(['auth:web'])->group(function () {
+        Route::get('/dashboard', [UserDashboardController::class, 'index']);
+    });
+ 
+
+    // dashboard routes
     Route::middleware(['auth:admin'])->group(function () {
         Route::get('dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
         Route::get('dashboard-alt', function () {
@@ -67,6 +82,9 @@ Route::prefix('admin')->group(function () {
         })->name('admin.dashboard.alt');
     });
 });
+Route::resource('services', ServiceController::class);
+Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
+
 });
 
 require __DIR__.'/auth.php';

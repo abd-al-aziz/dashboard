@@ -6,6 +6,7 @@ use App\Models\Booking;
 use App\Models\Pet;
 use App\Models\User;
 use App\Models\Room;
+use App\Models\Service;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 

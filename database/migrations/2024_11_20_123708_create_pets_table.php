@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->id(); // BIGINT and auto-increment (primary key)
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // Foreign key to users table
             $table->string('name', 255);
+            $table->string('image')->nullable()->change();
             $table->enum('type', ['dog', 'cat']);
             $table->string('breed', 255)->nullable();
             $table->integer('age')->unsigned()->nullable();

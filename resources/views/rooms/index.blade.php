@@ -2,6 +2,7 @@
 
 <div class="container mx-auto px-4">
     <h1 class="text-2xl font-bold mb-6">Rooms</h1>
+    <div class="flex justify-between items-center mb-4">
 
     <!-- نموذج البحث -->
     <form action="{{ route('rooms.index') }}" method="GET" class="mb-4">
@@ -20,6 +21,7 @@
     <div class="mb-4">
         <a href="{{ route('rooms.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Add New Room</a>
     </div>
+</div>
 
     <!-- جدول عرض الغرف -->
     <table class="w-full table-auto bg-white rounded-lg shadow-md">
@@ -44,11 +46,11 @@
                         {{ $room->is_available ? 'Yes' : 'No' }}
                     </td>
                     <td class="px-4 py-2">
-                        <a href="{{ route('rooms.edit', $room->id) }}" class="text-blue-500 hover:underline">Edit</a>
+                        <a href="{{ route('rooms.edit', $room->id) }}" class="bg-yellow-500 text-white px-2 py-1 me-4 rounded-md hover:bg-yellow-600 transition"><i class="bi bi-pencil-square"></i></a>
                         <form action="{{ route('rooms.destroy', $room->id) }}" method="POST" class="inline-block ml-2">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="text-red-500 hover:underline" onclick="return confirm('Are you sure?')">Delete</button>
+                            <button type="submit" class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600 transition" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
                         </form>
                     </td>
                 </tr>
