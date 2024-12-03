@@ -71,7 +71,7 @@ Route::prefix('admin')->group(function () {
 
     Route::middleware(['auth:web'])->group(function () {
         Route::get('/dashboard', [UserDashboardController::class, 'index']);
-    }); mmm
+    });
  
 
     // dashboard routes
