@@ -11,11 +11,24 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\custumer\DefaultHomeController;
+use App\Http\Controllers\custumer\AboutController;
+use App\Http\Controllers\custumer\ServicesController;
+use App\Http\Controllers\custumer\ServicesDetailsController;
+use App\Http\Controllers\custumer\TeamDetailsController;
+use App\Http\Controllers\custumer\RoomsController;
+use App\Http\Controllers\custumer\PhotosController;
+use App\Http\Controllers\custumer\ContactController;
 
 
-// Route::get('/', function () {
-//     return view('dashboard');
-// });
+
+
+
+
+
+Route::get('/', function () {
+    return view('/frontend/basic/home');
+});
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
@@ -39,8 +52,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/rooms/create', [RoomController::class, 'create'])->name('rooms.create');
     Route::post('/rooms', [RoomController::class, 'store'])->name('rooms.store');
     Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
-    Route::get('/rooms/edit/{room}', [RoomController::class, 'edit'])->name('rooms.edit');  // هذا هو روت التعد
-    Route::put('/rooms/{room}', [RoomController::class, 'update'])->name('rooms.update'); // هذا هو روت التحديث
+    Route::get('/rooms/edit/{room}', [RoomController::class, 'edit'])->name('rooms.edit'); 
+    Route::put('/rooms/{room}', [RoomController::class, 'update'])->name('rooms.update'); 
     Route::delete('/rooms/{room}', [RoomController::class, 'destroy'])->name('rooms.destroy');
 });
 //reviews routes
@@ -86,6 +99,19 @@ Route::resource('services', ServiceController::class);
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 
 });
+// template 
+Route::get('/home', [DefaultHomeController::class, 'index'])->name('home');
+Route ::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/services', [ServicesController::class, 'index'])->name('services');
+Route::get('/services-details', [ServicesDetailsController::class, 'index'])->name('services-details');
+Route::get('/team-details', [TeamDetailsController::class, 'index'])->name('team-details');
+Route::get('/room', [RoomsController::class, 'index'])->name('rooms');
+Route::get('/photo-gallery', [PhotosController::class, 'index'])->name('photo-gallery');
+Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
+
+
+
+
 
 require __DIR__.'/auth.php';
 

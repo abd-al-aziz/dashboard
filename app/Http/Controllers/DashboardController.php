@@ -60,7 +60,7 @@ class DashboardController extends Controller
             ->take(10)
             ->get();
 
-        return view('dashboard', compact(
+        return view('admin.dashboard', compact(
             'upcomingBookings',
             'activePets',
             'monthlyVisitors',
