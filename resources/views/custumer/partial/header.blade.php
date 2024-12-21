@@ -3,8 +3,6 @@
     <div class="container">
       <div class="top-bar-slid">
         <div>
-          <div class="phone-data">
-            <div class="phone">
               <i>
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                 <path d="M0,81v350h512V81H0z M456.952,111L256,286.104L55.047,111H456.952z M30,128.967l134.031,116.789L30,379.787V128.967z
@@ -12,21 +10,13 @@
                 </svg>
               </i>
             </div>
-            <div class="phone d-flax align-items-center">
-              <i>
-                <svg height="112" viewBox="0 0 24 24" width="112" xmlns="http://www.w3.org/2000/svg"><g clip-rule="evenodd" fill="rgb(255255,255)" fill-rule="evenodd"><path d="m7 2.75c-.41421 0-.75.33579-.75.75v17c0 .4142.33579.75.75.75h10c.4142 0 .75-.3358.75-.75v-17c0-.41421-.3358-.75-.75-.75zm-2.25.75c0-1.24264 1.00736-2.25 2.25-2.25h10c1.2426 0 2.25 1.00736 2.25 2.25v17c0 1.2426-1.0074 2.25-2.25 2.25h-10c-1.24264 0-2.25-1.0074-2.25-2.25z"></path><path d="m10.25 5c0-.41421.3358-.75.75-.75h2c.4142 0 .75.33579.75.75s-.3358.75-.75.75h-2c-.4142 0-.75-.33579-.75-.75z"></path><path d="m9.25 19c0-.4142.33579-.75.75-.75h4c.4142 0 .75.3358.75.75s-.3358.75-.75.75h-4c-.41421 0-.75-.3358-.75-.75z"></path></g></svg>
-              </i>
-              
-            </div>
           </div>
         </div>
         <div>
           <div class="time">
            
             <div class="login">
-                <i class="fa-solid fa-user"></i>
-                <a href="login.html">Login / Register</a>
-              </div>
+</div>
           </div>
         </div>
       </div>
@@ -34,7 +24,7 @@
   </div>
   <div class="container">
     <div class="bottom-bar">
-      <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+      <a href="index.html"><img src="assets/img/logo_smaller.jpg" alt="logo"></a>
         <nav class="navbar">
         <ul class="navbar-links">
         <li class="navbar-dropdown">
@@ -51,9 +41,7 @@
                         <a href="{{route('services-details')}}">services details</a>
                       </div>
                     </li>
-                    <li class="navbar-dropdown">
-                     <a href="{{ route('team-details') }}">Team Details</a>
-                    </li>
+                    
                     <li class="navbar-dropdown">
                      <a href="{{ route('rooms') }}">Rooms</a>
                     </li>
@@ -61,12 +49,13 @@
                      <a href="{{ route('photo-gallery') }}">Photo Gallery</a>
                     </li>
                     <li class="navbar-dropdown">
-                     <a href="{{ route('login') }}">Login/Reg</a>
+                      <a href="{{ route('contacts') }}">Contact Us</a>
+                    </li>
+                    <li class="navbar-dropdown">
+                     <a href="{{ route('login') }}">Login/Register</a>
                     </li>
                     
-                    <li class="navbar-dropdown">
-                      <a href="{{ route('contacts') }}">Contact</a>
-                    </li>
+                    
         </ul>
       </nav>
       <div class="menu-end">
@@ -123,7 +112,7 @@
                 <li><a href="team-details.html">team details</a></li>
                 <li><a href="how-we-works.html">how we works</a></li>
                 <li><a href="history.html">history</a></li>
-                <li><a href="pricing-packages.html">pricing packages</a></li>
+                <li><a href="pricing-packages.html">Rooms</a></li>
                 <li><a href="photo-gallery.html">photo gallery</a></li>
                 <li><a href="login.html">login</a></li>
               </ul>

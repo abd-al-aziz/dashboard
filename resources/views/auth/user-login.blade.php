@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
 </head>
 <body class="bg-gray-100 flex justify-center items-center h-screen">
     <div class="bg-white p-6 rounded shadow-md w-96">
-        <h1 class="text-2xl font-bold mb-4">Admin Login</h1>
-        <form method="POST" action="{{ route('user.login.submit') }}">
+        <h1 class="text-2xl font-bold mb-4">Admins Login</h1>
+        <form method="POST" action="{{ route('user.login') }}">
             @csrf
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
@@ -23,4 +23,4 @@
         </form>
     </div>
 </body>
-</html>
+</html> -->

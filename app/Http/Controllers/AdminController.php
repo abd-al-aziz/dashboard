@@ -27,7 +27,7 @@ class AdminController extends Controller
             ->paginate(10); // التصفح عبر الصفحات
 
         // إرجاع العرض مع البيانات
-        return view('users.index', compact('admin', 'search'));
+        return view('users.index', compact('users', 'search'));
     }
 
     /**

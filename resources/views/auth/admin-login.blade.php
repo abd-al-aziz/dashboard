@@ -10,7 +10,8 @@
     <div class="bg-white p-6 rounded shadow-md w-96">
         <h1 class="text-2xl font-bold mb-4">Admin Login</h1>
         <form method="POST" action="{{ route('admin.login.submit') }}">
-            @csrf
+    @csrf
+
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                 <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border rounded-md" required>

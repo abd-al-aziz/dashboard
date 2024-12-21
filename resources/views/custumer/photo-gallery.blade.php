@@ -10,7 +10,6 @@
                       <li class="breadcrumb-item">
                         <a href="index.html">Home</a>
                       </li>
-                      <li class="breadcrumb-item active" aria-current="page">pages</li>
                         <li class="breadcrumb-item active" aria-current="page">Photo Gallery</li>
                     </ol>
                 </div>
@@ -21,13 +20,13 @@
                         <svg width="260" height="260" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
                         </svg>
-                        <img src="https://via.placeholder.com/232x232" alt="banner">
+                        <img src="assets/img/cat-1.jpg" alt="banner">
                     </div>
                     <div class="banner-img-2">
                         <svg width="320" height="320" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
                         </svg>
-                        <img src="https://via.placeholder.com/299x299" alt="banner">
+                        <img src="assets/img/cat-3.jpg" alt="banner">
                     </div>
                 </div>
             </div>
@@ -41,81 +40,81 @@
         <div class="row">
             <div class="col-lg-4 col-md-6">
                 <div class="about-gallery-img">
-                    <a href="https://via.placeholder.com/390x470" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-6.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/390x470"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-6.jpg"></figure>
                 </div> 
                 <div class="about-gallery-img mb-lg-0">
-                    <a href="https://via.placeholder.com/387x210" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-1.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/387x210"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-1.webp"></figure>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="about-gallery-img">
-                    <a href="https://via.placeholder.com/387x210" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-2.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/387x210"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-2.webp"></figure>
                 </div>
                 <div class="about-gallery-img">
-                    <a href="https://via.placeholder.com/387x210" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-3.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/387x210"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-3.webp"></figure>
                 </div>
                 <div class="about-gallery-img">
-                    <a href="https://via.placeholder.com/387x210" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-4.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/387x210"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-4.webp"></figure>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="about-gallery-img">
-                    <a href="https://via.placeholder.com/387x210" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-5.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/387x210"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-5.webp"></figure>
                 </div>
                 <div class="about-gallery-img">
-                    <a href="https://via.placeholder.com/390x470" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-8.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/390x470"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-8.webp"></figure>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-6">
                 <div class="about-gallery-img">
-                    <a href="https://via.placeholder.com/390x470" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-9.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/390x470"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-9.webp"></figure>
                 </div> 
                 <div class="about-gallery-img mb-lg-0">
-                    <a href="https://via.placeholder.com/387x210" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-11.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/387x210"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-11.webp"></figure>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="about-gallery-img">
-                    <a href="https://via.placeholder.com/390x470" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-12.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/390x470"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-12.webp"></figure>
                 </div> 
                 <div class="about-gallery-img mb-lg-0">
-                    <a href="https://via.placeholder.com/387x210" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-7.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/387x210"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-7.jpg"></figure>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="about-gallery-img">
-                    <a href="https://via.placeholder.com/387x210" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-10.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/387x210"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-10.jpg"></figure>
                 </div>
                 <div class="about-gallery-img">
-                    <a href="https://via.placeholder.com/390x470" data-fancybox="gallery">
+                    <a href="http://127.0.0.1:8000/assets/img/g-13.webp" data-fancybox="gallery">
                        <i class="fa-solid fa-plus"></i>
-                    </a><figure><img alt="girl" src="https://via.placeholder.com/390x470"></figure>
+                    </a><figure><img alt="girl" src="assets/img/g-13.jpg"></figure>
                 </div>
             </div>
         </div>

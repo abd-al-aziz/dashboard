@@ -71,16 +71,19 @@ Route::post('/users', [UserController::class, 'store'])->name('users.store');
 Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
 
 Route::prefix('admin')->group(function () {
-    Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
-    Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
+    Route::get('login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
     Route::post('logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+    Route::middleware('admin')->group(function () {
+        Route::get('/dashboard', function () {
+            return view('admin.dashboard');
+        })->name('admin.dashboard');
+    });
 
     
 
-    // User Login Routes
-    Route::get('/login', [UserAuthController::class, 'showLoginForm'])->name('user.login');
-    Route::post('/login', [UserAuthController::class, 'login']);
-    Route::post('/logout', [UserAuthController::class, 'logout'])->name('user.logout');
+    
+   
 
     Route::middleware(['auth:web'])->group(function () {
         Route::get('/dashboard', [UserDashboardController::class, 'index']);
@@ -104,7 +107,7 @@ Route::get('/home', [DefaultHomeController::class, 'index'])->name('home');
 Route ::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/services', [ServicesController::class, 'index'])->name('services');
 Route::get('/services-details', [ServicesDetailsController::class, 'index'])->name('services-details');
-Route::get('/team-details', [TeamDetailsController::class, 'index'])->name('team-details');
+// Route::get('/team-details', [TeamDetailsController::class, 'index'])->name('team-details');
 Route::get('/room', [RoomsController::class, 'index'])->name('rooms');
 Route::get('/photo-gallery', [PhotosController::class, 'index'])->name('photo-gallery');
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');

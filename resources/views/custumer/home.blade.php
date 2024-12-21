@@ -7,14 +7,14 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="hero-two-img">
-                            <img src="https://via.placeholder.com/604x599" alt="hero-two-img">
+                            <img src="assets/img/owner.png" alt="hero-two-img">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="hero-two-text">
                             <h1>Loving Care For Your Pets</h1>
-                            <p>Pet sitting & Pet care from a small pet to a small holding.</p>
-                            <a href="contact.html" class="button">Get Appointment</a>
+                            <p>cat hotel provides the best staying and boarding service in healthy and comfortable environment.</p>
+                            <a href="contact.html" class="button">Get Booking</a>
                         </div>
                     </div>
                 </div>
@@ -23,50 +23,20 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="hero-two-img">
-                            <img src="https://via.placeholder.com/604x599" alt="hero-two-img">
+                            <img src="assets/img/owner.png" alt="hero-two-img">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="hero-two-text">
                             <h1>For Your Pets Loving Care</h1>
-                            <p>Pet sitting & Pet care from a small pet to a small holding.</p>
-                            <a href="contact.html" class="button">Get Appointment</a>
+                            <p>cat hotel provides the best staying and boarding service in healthy and comfortable environment.</p>
+                            <a href="contact.html" class="button">Get Booking</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 item">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="hero-two-img">
-                            <img src="https://via.placeholder.com/604x599" alt="hero-two-img">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="hero-two-text">
-                            <h1>Loving Care For Your Pets</h1>
-                            <p>Pet sitting & Pet care from a small pet to a small holding.</p>
-                            <a href="contact.html" class="button">Get Appointment</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 item">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="hero-two-img">
-                            <img src="https://via.placeholder.com/604x599" alt="hero-two-img">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="hero-two-text">
-                            <h1>For Your Pets Loving Care</h1>
-                            <p>Pet sitting & Pet care from a small pet to a small holding.</p>
-                            <a href="contact.html" class="button">Get Appointment</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            
         </div>
     </div>
     <img src="assets/img/hero-shaps-2.png" class="hero-shaps-2" alt="hero-shaps">
@@ -89,13 +59,13 @@
                         <li><img src="assets/img/list.png" alt="list">Hungry horses: whatever the size of your pe</li>
                     </ul>
                     <div class="company-oner">
-                        <img src="https://via.placeholder.com/100x100" alt="girl">
-                        <svg width="116" height="116" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                        <img src="assets/img/owner-1.jpg" alt="girl">
+                        <!-- <svg width="116" height="116" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg"> -->
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#000"/>
                         </svg>
                         <div>
-                            <h3>Jessica Catty</h3>
-                            <p>Owner Pet Care Company</p>
+                            <h3>Odai Abu Hadeed</h3>
+                            <p>Owner Pet boarding service</p>
                         </div>
                     </div>
                 </div>
@@ -103,27 +73,27 @@
             <div class="col-lg-6">
                 <div class="pets-icon-text">
                     <div class="pets-icon">
-                        <img src="assets/img/pets-icon-1.png" alt="pets-icon">
+                        <img src="" alt="pets-icon">
                         <a href="service-details.html">Pet Sitting</a>
                     </div>
                     <div class="pets-icon">
-                        <img src="assets/img/pets-icon-2.png" alt="pets-icon">
+                        <img src="" alt="pets-icon">
                         <a href="service-details.html">Feeding</a>
                     </div>
                     <div class="pets-icon">
-                        <img src="assets/img/pets-icon-3.png" alt="pets-icon">
+                        <img src="" alt="pets-icon">
                         <a href="service-details.html">Walking</a>
                     </div>
                     <div class="pets-icon">
-                        <img src="assets/img/pets-icon-4.png" alt="pets-icon">
+                        <img src="" alt="pets-icon">
                         <a href="service-details.html">Pet Boarding</a>
                     </div>
                     <div class="pets-icon">
-                        <img src="assets/img/pets-icon-5.png" alt="pets-icon">
-                        <a href="service-details.html">Horse Care</a>
+                        <img src="" alt="pets-icon">
+                        <a href="service-details.html">Pet Care</a>
                     </div>
                     <div class="pets-icon">
-                        <img src="assets/img/pets-icon-6.png" alt="pets-icon">
+                        <img src="" alt="pets-icon">
                         <a href="service-details.html">Medical</a>
                     </div>
                 </div>
@@ -136,18 +106,18 @@
         <div class="heading">
             <img src="assets/img/heading-img.png" alt="heading-img">
             <h6>Discover a world of happiness.</h6>
-            <h2>Choose Packages</h2>
+            <h2>Choose Rooms</h2>
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-6">
                 <div class="package">
                     <figure>
-                        <img src="https://via.placeholder.com/378x300" alt="Package">
+                        <img src="assets/img/room-3.webp" alt="Package">
                     </figure>
                     <div class="package-text">
                         <i><img src="assets/img/package-1.png" alt="Package"></i>
-                        <h4>$80.00 <span>/ Per month</span></h4>
-                        <h3>Dog Grooming</h3>
+                        <h4>JOD 10.00 <span>/ Per Day</span></h4>
+                        <h3>Economic</h3>
                         <ul class="list">
                             <li><i class="fa-solid fa-check"></i>On site salon</li>
                             <li><i class="fa-solid fa-check"></i>Experienced friendly team</li>
@@ -164,8 +134,8 @@
                     </figure>
                     <div class="package-text">
                         <i><img src="assets/img/package-2.png" alt="Package"></i>
-                        <h4>$140.00 <span>/ Per month</span></h4>
-                        <h3>Training & Advice</h3>
+                        <h4>JOD 20.00 <span>/ Per Day</span></h4>
+                        <h3>Deluxe</h3>
                         <ul class="list">
                             <li><i class="fa-solid fa-check"></i>Come. Play. Train.</li>
                             <li><i class="fa-solid fa-check"></i>Puppy Training Classes</li>
@@ -178,12 +148,12 @@
             <div class="col-lg-4 col-md-6">
                 <div class="package mb-0">
                     <figure>
-                        <img src="https://via.placeholder.com/378x300" alt="Package">
+                        <img src="assets/img/room-1.jpg" alt="Package">
                     </figure>
                     <div class="package-text">
                         <i><img src="assets/img/package-3.png" alt="Package"></i>
-                        <h4>$190.00 <span>/ Per month</span></h4>
-                        <h3>Pet Sitting</h3>
+                        <h4>JOD 30.00 <span>/ Per Day</span></h4>
+                        <h3>Royal</h3>
                         <ul class="list">
                             <li><i class="fa-solid fa-check"></i>Photos and updates</li>
                             <li><i class="fa-solid fa-check"></i>Doggy Day care throughout the week</li>
@@ -197,7 +167,7 @@
     </div>
 </section>
 
-<section class="gap">
+<!-- <section class="gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6">
@@ -241,7 +211,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section>
     <div class="container">
         <div class="heading">
@@ -350,7 +320,7 @@
         </div>
     </div>
 </div>
-<section class="gap position-relative" style="background-image: url(assets/img/client-b.jpg)">
+<!-- <section class="gap position-relative" style="background-image: url(assets/img/client-b.jpg)">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -428,6 +398,6 @@
         </div>
         <img src="assets/img/faq-shaps.png" alt="faq-shaps" class="faq-shaps">
     </div>
-</section>
+</section> -->
 
 @endsection
