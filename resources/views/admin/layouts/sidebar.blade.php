@@ -28,6 +28,10 @@
                     <i class="fas fa-concierge-bell"></i>
                     <span>Services</span>
                 </a>
+                <a href="{{ route('adoption.index') }}" class="flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-users"></i>
+                    <span>Adoptions</span>
+                </a>
                 <a href="{{ route('reviews.index') }}" class="flex items-center space-x-3 px-3 py-2 rounded-lg hover:bg-gray-100">
                     <i class="fas fa-star"></i>
                     <span>Reviews</span>

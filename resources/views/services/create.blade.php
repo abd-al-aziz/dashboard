@@ -3,7 +3,7 @@
 <div class="container mx-auto px-4">
     <h1 class="text-2xl font-bold mb-6">Add Service</h1>
 
-    <form method="POST" action="{{ route('services.store') }}">
+    <form method="POST" action="{{ route('service.store') }}">
         @csrf
         <div class="mb-4">
             <label for="name" class="block text-sm font-medium">Service Name</label>

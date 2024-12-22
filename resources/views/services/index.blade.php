@@ -2,7 +2,7 @@
 
 <div class="container mx-auto px-4">
     <h1 class="text-2xl font-bold mb-6">Services</h1>
-    <a href="{{ route('services.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-lg mb-4 inline-block">Add Service</a>
+    <a href="{{ route('service.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-lg mb-4 inline-block">Add Service</a>
 
     @if(session('success'))
         <div class="bg-green-100 text-green-800 p-4 rounded-lg mb-4">

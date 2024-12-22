@@ -11,6 +11,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\AdoptionController;
 use App\Http\Controllers\custumer\DefaultHomeController;
 use App\Http\Controllers\custumer\AboutController;
 use App\Http\Controllers\custumer\ServicesController;
@@ -19,6 +20,8 @@ use App\Http\Controllers\custumer\TeamDetailsController;
 use App\Http\Controllers\custumer\RoomsController;
 use App\Http\Controllers\custumer\PhotosController;
 use App\Http\Controllers\custumer\ContactController;
+use App\Http\Controllers\custumer\AdoptionsController;
+
 
 
 
@@ -48,13 +51,18 @@ Route::put('/bookings/{booking}', [BookingController::class, 'update'])->name('b
 Route::resource('pets', PetController::class)->middleware('auth');
 Route::post('/bookings/{id}/update-status', [BookingController::class, 'updateStatus'])->name('bookings.updateStatus');
 
+Route::resource('adoption', AdoptionController::class);
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/rooms/create', [RoomController::class, 'create'])->name('rooms.create');
     Route::post('/rooms', [RoomController::class, 'store'])->name('rooms.store');
+    Route::get('/adoption', [AdoptionController::class, 'index'])->name('adoption.index');
     Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
     Route::get('/rooms/edit/{room}', [RoomController::class, 'edit'])->name('rooms.edit'); 
     Route::put('/rooms/{room}', [RoomController::class, 'update'])->name('rooms.update'); 
     Route::delete('/rooms/{room}', [RoomController::class, 'destroy'])->name('rooms.destroy');
+   
 });
 //reviews routes
 Route::middleware('auth')->group(function () {
@@ -64,6 +72,9 @@ Route::middleware('auth')->group(function () {
     Route::put('/reviews/{review}/status/{status}', [ReviewController::class, 'updateStatus'])->name('reviews.updateStatus');
     Route::get('/reviews/update-status/{reviewId}/{status}', [ReviewController::class, 'updateStatus'])->name('reviews.update.status');
 });
+
+
+
 
 Route::resource('users', UserController::class);
 Route::get('/users', [UserController::class, 'index'])->name('users.index');
@@ -98,8 +109,8 @@ Route::prefix('admin')->group(function () {
         })->name('admin.dashboard.alt');
     });
 });
-Route::resource('services', ServiceController::class);
-Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
+Route::resource('service', ServiceController::class);
+Route::get('/service', [ServiceController::class, 'index'])->name('service.index');
 
 });
 // template 
@@ -111,6 +122,8 @@ Route::get('/services-details', [ServicesDetailsController::class, 'index'])->na
 Route::get('/room', [RoomsController::class, 'index'])->name('rooms');
 Route::get('/photo-gallery', [PhotosController::class, 'index'])->name('photo-gallery');
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
+Route::get('/adoptions', [AdoptionsController::class, 'index'])->name('adoptions');
+
 
 
 
