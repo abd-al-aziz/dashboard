@@ -11,7 +11,8 @@ class AdoptionsController extends Controller
     public function index()
     {
         // Fetch all adoptions from the database
-        $adoptions = Adoption::all();
+        $adoptions = Adoption::where('is_adopted', '0' )
+        ->paginate(8);
 
         // Pass the data to the view
         return view('custumer.adoptions', compact('adoptions'));

@@ -12,11 +12,10 @@ class AdoptionController extends Controller
         $search = $request->input('search');
         $adoptions = Adoption::query()
             ->when($search, function ($query, $search) {
-                $query->where('name', 'like', '%' . $search . '%')
-                      ->orWhere('breed', 'like', '%' . $search . '%')
-                      ->orWhere('color', 'like', '%' . $search . '%');
+                $query->where('is_adopted', '0' );
+                     
             })
-            ->paginate(10);
+            ->paginate(8);
 
         return view('adoption.index', compact('adoptions', 'search'));
     }
@@ -80,4 +79,9 @@ class AdoptionController extends Controller
         $adoption->delete();
         return redirect()->route('adoption.index')->with('success', 'Adoption request deleted successfully.');
     }
+    public function requestAdoption(Adoption $adoption)
+{
+    $adoption->update(['is_adopted' => true]);
+    return redirect()->back()->with('success', 'Adoption request submitted successfully.');
+}
 }

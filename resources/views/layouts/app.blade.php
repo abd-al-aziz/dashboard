@@ -31,6 +31,13 @@
             <main>
             @yield('content')
             </main>
+            @auth
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700">Logout</button>
+
+        </form>
+    @endauth
         </div>
     </body>
 </html>

@@ -60,7 +60,7 @@
                         <img src="assets/img/room-3.webp" alt="Package">
                     </figure>
                     <div class="package-text">
-                        <i><img src="assets/img/package-1.png" alt="Package"></i>
+                        <!-- <i><img src="assets/img/package-1.png" alt="Package"></i> -->
                         <h4>JOD 10.00 <span>/ Per Day</span></h4>
                         <h3>Economic</h3>
                         <ul class="list">
@@ -72,7 +72,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <!-- <div class="col-lg-4 col-md-6">
                 <div class="package">
                     <figure>
                         <img src="https://via.placeholder.com/378x300" alt="Package">
@@ -89,14 +89,14 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="col-lg-4 col-md-6">
                 <div class="package mb-0">
                     <figure>
                         <img src="assets/img/room-1.jpg" alt="Package">
                     </figure>
                     <div class="package-text">
-                        <i><img src="assets/img/package-3.png" alt="Package"></i>
+                        <!-- <i><img src="assets/img/package-3.png" alt="Package"></i> -->
                         <h4>JOD 30.00 <span>/ Per Day</span></h4>
                         <h3>Royal</h3>
                         <ul class="list">
@@ -116,72 +116,71 @@
     <div class="container">
         <div class="heading">
             <img src="assets/img/heading-img.png" alt="heading-img">
-            <h6>Dogs seeking a forever home</h6>
+            <h6>Cats seeking a forever home</h6>
             <h2>Looking For A New Pet</h2>
         </div>
         <div class="row align-items-center">
-            <div class="col-lg-12">
-                <div class="pets-slider owl-carousel owl-theme" data-items="2" data-loop="true" data-nav="true" data-margin="8">
-                    <div class="item">
-                        <div class="pets">
-                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                            <img src="https://via.placeholder.com/220x220" alt="pets">
-                            <h3><a href="#">Cindy</a></h3>
-                            <h6>Saluki Cross</h6>
-                            <span>5 - 7 years</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pets">
-                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                            <img src="https://via.placeholder.com/220x220" alt="pets">
-                            <h3><a href="#">Russi</a></h3>
-                            <h6>Russi</h6>
-                            <span>2 - 3 years</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pets">
-                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                            <img src="https://via.placeholder.com/220x220" alt="pets">
-                            <h3><a href="#">Cindy</a></h3>
-                            <h6>Saluki Cross</h6>
-                            <span>5 - 7 years</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pets">
-                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                            <img src="https://via.placeholder.com/220x220" alt="pets">
-                            <h3><a href="#">Russi</a></h3>
-                            <h6>Russi</h6>
-                            <span>2 - 3 years</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pets">
-                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                            <img src="https://via.placeholder.com/220x220" alt="pets">
-                            <h3><a href="#">Cindy</a></h3>
-                            <h6>Saluki Cross</h6>
-                            <span>5 - 7 years</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="pets">
-                            <a href="#"><i class="fa-solid fa-heart"></i></a>
-                            <img src="https://via.placeholder.com/220x220" alt="pets">
-                            <h3><a href="#">Russi</a></h3>
-                            <h6>Russi</h6>
-                            <span>2 - 3 years</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-6">
+             <div class="row pets-slider owl-carousel owl-theme" data-items="4" data-loop="true" data-nav="true" data-margin="10">
+              <div class="col-lg-12 item">
+              <div class="pets">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <img src="https://via.placeholder.com/220x220" alt="pets">
+                <h3><a href="#">Cindy</a></h3>
+                <h6>Saluki Cross</h6>
+                <span>5 - 7 years</span>
+              </div>
             </div>
+            <div class="col-lg-12 item">
+            <div class="pets">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <img src="https://via.placeholder.com/220x220" class="w-75" alt="pets">
+                <h3><a href="#">Russi</a></h3>
+                <h6>Russi</h6>
+                <span>2 - 3 years</span>
+            </div>
+           </div>
+           <!-- <div class="col-lg-12 item">
+            <div class="pets">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <img src="https://via.placeholder.com/220x220" alt="pets">
+                <h3><a href="#">Cindy</a></h3>
+                <h6>Saluki Cross</h6>
+                <span>5 - 7 years</span>
+            </div>
+         </div> -->
+         <!-- <div class="col-lg-12 item">
+            <div class="pets">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <img src="https://via.placeholder.com/220x220" alt="pets">
+                <h3><a href="#">Cindy</a></h3>
+                <h6>Saluki Cross</h6>
+                <span>5 - 7 years</span>
+            </div>
+         </div> -->
+         <!-- <div class="col-lg-12 item">
+            <div class="pets">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <img src="https://via.placeholder.com/220x220" alt="pets">
+                <h3><a href="#">Cindy</a></h3>
+                <h6>Saluki Cross</h6>
+                <span>5 - 7 years</span>
+            </div>
+          </div>
+          <div class="col-lg-12 item">
+            <div class="pets">
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <img src="https://via.placeholder.com/220x220" alt="pets">
+                <h3><a href="#">Cindy</a></h3>
+                <h6>Saluki Cross</h6>
+                <span>5 - 7 years</span>
+            </div>
+          </div>
+         </div> -->
+          </div>
         </div>
     </div>
 </section>
-
 <section class="gap section-client" style="background-image: url(assets/img/client-b.jpg)">
     <div class="container">
         <div class="heading two">

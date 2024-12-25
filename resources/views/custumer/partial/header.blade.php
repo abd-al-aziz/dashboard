@@ -37,16 +37,24 @@
               <a href="{{ route('contacts') }}">Contact Us</a>
             </li>
 
-            <!-- If user is authenticated, show Profile button instead of Login/Register -->
+            <!-- If user is authenticated, show Profile and Logout options -->
             @if (Auth::check())
               <li class="navbar-dropdown">
-                <a href="#">Profile</a>
+                <a href=""><i class="fa-solid fa-user"></i></a>
+              </li>
+              <!-- Logout Form -->
+              <li class="navbar-dropdown">
+                <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                  <button type="submit" class="submit-btn">
+                   <i class="fas fa-sign-out-alt"></i> 
+                   </button>
+                </form>
               </li>
             @else
               <li class="navbar-dropdown">
                 <a href="{{ route('login') }}">Login</a>
               </li>
-              
             @endif
           </ul>
         </nav>

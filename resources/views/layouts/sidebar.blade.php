@@ -7,7 +7,7 @@
                 </div>
             </div>
             <nav class="p-4 space-y-4">
-                <a href="{{ route('dashboard') }}" class="flex items-center space-x-3 px-3 py-2 bg-blue-50 rounded-lg text-blue-600">
+                <a href="{{ route('admin.dashboard') }}" class="flex items-center space-x-3 px-3 py-2 bg-blue-50 rounded-lg text-blue-600">
                     <i class="fas fa-home"></i>
                     <span>Dashboard</span>
                 </a>

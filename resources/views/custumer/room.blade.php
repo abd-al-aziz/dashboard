@@ -40,13 +40,13 @@
         <div class="package two">
             <div class="package-text">
                 <div>
-                    <h4>JOD 10.00 <span>/ Per Day</span></h4>
+                    <h4>JOD 5.00 <span>/ Per Day</span></h4>
                     <h3>Economic Room</h3>
                     <ul class="list">
-                        <li><i class="fa-solid fa-check"></i>On site salon</li>
-                        <li><i class="fa-solid fa-check"></i>Experienced friendly team</li>
+                        <li><i class="fa-solid fa-check"></i>Health Care</li>
+                        <li><i class="fa-solid fa-check"></i>Space to Play</li>
                         <li><i class="fa-solid fa-check"></i>Grooming you can feel good about</li>
-                        <li><i class="fa-solid fa-check"></i>Ultimate convenience</li>
+                        <li><i class="fa-solid fa-check"></i>Space to Play</li>
                     </ul>
                     <a href="#" class="button">Book Room</a>
                 </div>
@@ -55,16 +55,16 @@
                 <img src="assets/img/room-3.webp" alt="Package">
             </figure>
         </div>
-        <div class="package two">
+        <!-- <div class="package two">
             <div class="package-text">
                 <div>
-                    <h4>JOD 20.00 <span>/ Per Day</span></h4>
+                    <h4>JOD 10.00 <span>/ Per Day</span></h4>
                     <h3>Deluxe Room</h3>
                     <ul class="list">
-                        <li><i class="fa-solid fa-check"></i>On site salon</li>
-                        <li><i class="fa-solid fa-check"></i>Experienced friendly team</li>
+                        <li><i class="fa-solid fa-check"></i>Health Care</li>
+                        <li><i class="fa-solid fa-check"></i>Space to Play</li>
                         <li><i class="fa-solid fa-check"></i>Grooming you can feel good about</li>
-                        <li><i class="fa-solid fa-check"></i>Ultimate convenience</li>
+                        <li><i class="fa-solid fa-check"></i>Space to Play</li>
                     </ul>
                     <a href="#" class="button">Book Room</a>
                 </div>
@@ -76,7 +76,7 @@
         <div class="package two">
             <div class="package-text">
                 <div>
-                    <h4>JOD 30.00 <span>/ Per Day</span></h4>
+                    <h4>JOD 15.00 <span>/ Per Day</span></h4>
                     <h3>Royal Room</h3>
                     <ul class="list">
                         <li><i class="fa-solid fa-check"></i>On site salon</li>
@@ -90,7 +90,7 @@
             <figure>
                 <img src="assets/img/room-1.jpg" alt="Package">
             </figure>
-        </div>
+        </div> -->
        
     </div>
 </section>
