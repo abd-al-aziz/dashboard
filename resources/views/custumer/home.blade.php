@@ -43,71 +43,35 @@
     <img src="assets/img/hero-shaps-3.png" class="hero-shaps-3" alt="hero-shaps">
     <img src="assets/img/hero-shaps-3.png" class="hero-shaps-4" alt="hero-shaps">
 </section>
-
-
-
-<section class="gap no-top">
+<section class="gap">
     <div class="container">
-        <div class="heading">
-            <img src="assets/img/heading-img.png" alt="heading-img">
-            <h6>Discover a world of happiness.</h6>
-            <h2>Choose Rooms</h2>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="package">
-                    <figure>
-                        <img src="assets/img/room-3.webp" alt="Package">
-                    </figure>
-                    <div class="package-text">
-                        <!-- <i><img src="assets/img/package-1.png" alt="Package"></i> -->
-                        <h4>JOD 10.00 <span>/ Per Day</span></h4>
-                        <h3>Economic</h3>
-                        <ul class="list">
-                            <li><i class="fa-solid fa-check"></i>On site salon</li>
-                            <li><i class="fa-solid fa-check"></i>Experienced friendly team</li>
-                            <li><i class="fa-solid fa-check"></i>Grooming you can feel good about</li>
-                            <li><i class="fa-solid fa-check"></i>Ultimate convenience</li>
-                        </ul>
+        <div class="package two">
+            <div class="package-text">
+                <div>
+                    <h4>
+                        JOD 5.00
+                        <span>/ Per Day</span>
+                    </h4>
+                    <div class="room-status mb-3">
+                        <span class="badge bg-success" style="padding: 8px 15px; font-size: 14px;">
+                            Available
+                        </span>
                     </div>
+                    <p class="mb-4">A cozy room perfect for your pet's comfort and care.</p>
+                    <ul class="list">
+                        <li><i class="fa-solid fa-check"></i> Health Care</li>
+                        <li><i class="fa-solid fa-check"></i> Space to Play</li>
+                        <li><i class="fa-solid fa-check"></i> Grooming you can feel good about</li>
+                        <li><i class="fa-solid fa-check"></i> Space to Play</li>
+                    </ul>
+
+                    <a href="" class="button">Book Room</a>
                 </div>
             </div>
-            <!-- <div class="col-lg-4 col-md-6">
-                <div class="package">
-                    <figure>
-                        <img src="https://via.placeholder.com/378x300" alt="Package">
-                    </figure>
-                    <div class="package-text">
-                        <i><img src="assets/img/package-2.png" alt="Package"></i>
-                        <h4>JOD 20.00 <span>/ Per Day</span></h4>
-                        <h3>Deluxe</h3>
-                        <ul class="list">
-                            <li><i class="fa-solid fa-check"></i>Come. Play. Train.</li>
-                            <li><i class="fa-solid fa-check"></i>Puppy Training Classes</li>
-                            <li><i class="fa-solid fa-check"></i>Bruce’s 121 Expert Advice</li>
-                            <li><i class="fa-solid fa-check"></i>Bruce’s Training Workshops</li>
-                        </ul>
-                    </div>
-                </div>
-            </div> -->
-            <div class="col-lg-4 col-md-6">
-                <div class="package mb-0">
-                    <figure>
-                        <img src="assets/img/room-1.jpg" alt="Package">
-                    </figure>
-                    <div class="package-text">
-                        <!-- <i><img src="assets/img/package-3.png" alt="Package"></i> -->
-                        <h4>JOD 30.00 <span>/ Per Day</span></h4>
-                        <h3>Royal</h3>
-                        <ul class="list">
-                            <li><i class="fa-solid fa-check"></i>Photos and updates</li>
-                            <li><i class="fa-solid fa-check"></i>Doggy Day care throughout the week</li>
-                            <li><i class="fa-solid fa-check"></i>Grooming you can feel good about</li>
-                            <li><i class="fa-solid fa-check"></i>Fully licensed & DBS checked</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
+            <figure>
+                <img src="assets/img/room-4.jpg" alt="Room">
+            </figure>
         </div>
     </div>
 </section>
@@ -118,67 +82,48 @@
             <img src="assets/img/heading-img.png" alt="heading-img">
             <h6>Cats seeking a forever home</h6>
             <h2>Looking For A New Pet</h2>
+            <a href="{{ route('adoptions') }}" class="btn btn-warning text-white font-weight-bold px-4 py-2 rounded-3">
+               Explore Now
+            </a>
+
         </div>
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-             <div class="row pets-slider owl-carousel owl-theme" data-items="4" data-loop="true" data-nav="true" data-margin="10">
-              <div class="col-lg-12 item">
-              <div class="pets">
-                <a href="#"><i class="fa-solid fa-heart"></i></a>
-                <img src="https://via.placeholder.com/220x220" alt="pets">
-                <h3><a href="#">Cindy</a></h3>
-                <h6>Saluki Cross</h6>
-                <span>5 - 7 years</span>
-              </div>
-            </div>
-            <div class="col-lg-12 item">
+        <div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
             <div class="pets">
-                <a href="#"><i class="fa-solid fa-heart"></i></a>
-                <img src="https://via.placeholder.com/220x220" class="w-75" alt="pets">
+                <img src="assets/img/g-7.jpg" alt="pets" class="img-fluid" >
+                <h3><a href="#">Cindy</a></h3>
+                <h6>Britich</h6>
+                <span>1 years</span>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="pets">
+                <img src="assets/img/g-7.jpg" alt="pets" class="img-fluid">
                 <h3><a href="#">Russi</a></h3>
                 <h6>Russi</h6>
                 <span>2 - 3 years</span>
             </div>
-           </div>
-           <!-- <div class="col-lg-12 item">
-            <div class="pets">
-                <a href="#"><i class="fa-solid fa-heart"></i></a>
-                <img src="https://via.placeholder.com/220x220" alt="pets">
-                <h3><a href="#">Cindy</a></h3>
-                <h6>Saluki Cross</h6>
-                <span>5 - 7 years</span>
-            </div>
-         </div> -->
-         <!-- <div class="col-lg-12 item">
-            <div class="pets">
-                <a href="#"><i class="fa-solid fa-heart"></i></a>
-                <img src="https://via.placeholder.com/220x220" alt="pets">
-                <h3><a href="#">Cindy</a></h3>
-                <h6>Saluki Cross</h6>
-                <span>5 - 7 years</span>
-            </div>
-         </div> -->
-         <!-- <div class="col-lg-12 item">
-            <div class="pets">
-                <a href="#"><i class="fa-solid fa-heart"></i></a>
-                <img src="https://via.placeholder.com/220x220" alt="pets">
-                <h3><a href="#">Cindy</a></h3>
-                <h6>Saluki Cross</h6>
-                <span>5 - 7 years</span>
-            </div>
-          </div>
-          <div class="col-lg-12 item">
-            <div class="pets">
-                <a href="#"><i class="fa-solid fa-heart"></i></a>
-                <img src="https://via.placeholder.com/220x220" alt="pets">
-                <h3><a href="#">Cindy</a></h3>
-                <h6>Saluki Cross</h6>
-                <span>5 - 7 years</span>
-            </div>
-          </div>
-         </div> -->
-          </div>
         </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="pets">
+                <img src="assets/img/g-12.webp" alt="pets" class="img-fluid">
+                <h3><a href="#">Bella</a></h3>
+                <h6>German Shepherd</h6>
+                <span>3 - 4 years</span>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="pets">
+                <img src="assets/img/g-11.webp" alt="pets" class="img-fluid">
+                <h3><a href="#">Luna</a></h3>
+                <h6>Persian Cat</h6>
+                <span>1 - 2 years</span>
+            </div>
+        </div>
+    </div>
+</div>
+
     </div>
 </section>
 <section class="gap section-client" style="background-image: url(assets/img/client-b.jpg)">
@@ -232,18 +177,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="rated">
-            <ul class="star">
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-            </ul>
-            <h4>Rated 4.5 Out of 5.0</h4>
-        </div> -->
     </div>
 </section>
-
-
 @endsection

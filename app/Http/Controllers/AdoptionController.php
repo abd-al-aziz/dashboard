@@ -12,8 +12,9 @@ class AdoptionController extends Controller
         $search = $request->input('search');
         $adoptions = Adoption::query()
             ->when($search, function ($query, $search) {
-                $query->where('is_adopted', '0' );
-                     
+                $query->where('name', 'like', '%' . $search . '%')
+                      ->orWhere('breed', 'like', '%' . $search . '%')
+                      ->orWhere('color', 'like', '%' . $search . '%');
             })
             ->paginate(8);
 

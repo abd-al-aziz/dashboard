@@ -1,7 +1,7 @@
 @include('layouts.header')
 
 <div class="container mx-auto px-4">
-    <h1 class="text-2xl font-bold mb-6">Add New Adoption Request</h1>
+    <h1 class="text-2xl font-bold mb-6">Adoption</h1>
 
     <div class="flex justify-between items-center mb-6">
         <!-- Search Form -->
@@ -20,7 +20,7 @@
 
         <!-- Add New Request Button -->
         <a href="{{ route('adoption.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-            Add New Request
+        Add New Adoption Request
         </a>
     </div>
 

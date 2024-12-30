@@ -25,9 +25,8 @@ class ServiceController extends Controller
             'price' => 'required|numeric|min:0',
             'status' => 'required|boolean',
         ]);
-
-        Service::create($validated);
-        return redirect()->route('services.index')->with('success', 'Service created successfully!');
+        Services::create($validated);
+        return redirect()->route('service.index')->with('success', 'Service created successfully!');
     }
 
     public function edit(Service $service)

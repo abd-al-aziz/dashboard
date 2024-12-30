@@ -15,7 +15,6 @@ return new class extends Migration {
         Schema::create('rooms', function (Blueprint $table) {
             $table->id(); // BIGINT and auto-increment (primary key)
             $table->string('name', 255);
-            $table->enum('type', ['economic', 'deluxe', 'royal']);
             $table->text('description')->nullable();
             $table->decimal('price_per_night', 10, 2);
             $table->boolean('is_available')->default(true);

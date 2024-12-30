@@ -387,9 +387,10 @@ header {
 }
 .navbar {
     display: flex;
-    align-items: center;
+    align-items: start;
     position: relative;
     padding: 0;
+    text-align: center;
 }
 .navbar-logo {
   color: #ff3f34;
@@ -2553,7 +2554,6 @@ li.option.selected.focus {
 .pets a{
     position: absolute;
     top: 18px;
-    left: 18px;
     color: #a9a9a9;
 }
 .pets h3 a {
@@ -3911,7 +3911,7 @@ ol.breadcrumb {
     position: relative;
     padding: 7px 40px;
     margin-left: 15px;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     display: inline-flex;
 }
 .pagination li {
@@ -4488,7 +4488,7 @@ h3.history {
 .package.two {
     display: flex;
     justify-content: space-between;
-    background-color: antiquewhite;
+    background-color: #fffec9;
     padding: 30px 70px;
     align-items: center;
     margin-bottom: 20px;

@@ -28,7 +28,6 @@
         <thead class="bg-gray-200">
             <tr>
                 <th class="px-4 py-2 text-gray-800">Name</th>
-                <th class="px-4 py-2 text-gray-800">Type</th>
                 <th class="px-4 py-2 text-gray-800">Description</th>
                 <th class="px-4 py-2 text-gray-800">Price per Night</th>
                 <th class="px-4 py-2 text-gray-800">Available</th>
@@ -39,7 +38,6 @@
             @foreach($rooms as $room)
                 <tr class="hover:bg-gray-50">
                     <td class="px-4 py-2 text-gray-700">{{ $room->name }}</td>
-                    <td class="px-4 py-2 text-gray-700">{{ $room->type }}</td>
                     <td class="px-4 py-2 text-gray-700">{{ $room->description }}</td>
                     <td class="px-4 py-2 text-gray-700">${{ $room->price_per_night }}</td>
                     <td class="px-4 py-2 text-gray-700">

@@ -11,10 +11,6 @@
             <input type="text" name="name" value="{{ old('name', $room->name) }}" class="w-full border-gray-300 rounded-lg" required>
         </div>
 
-        <div class="mb-4">
-            <label for="type" class="block text-sm font-medium">Type</label>
-            <input type="text" name="type" value="{{ old('type', $room->type) }}" class="w-full border-gray-300 rounded-lg" required>
-        </div>
 
         <div class="mb-4">
             <label for="description" class="block text-sm font-medium">Description</label>

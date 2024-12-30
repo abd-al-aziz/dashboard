@@ -27,7 +27,7 @@ class AdminController extends Controller
             ->paginate(10); // التصفح عبر الصفحات
 
         // إرجاع العرض مع البيانات
-        return view('users.index', compact('users', 'search'));
+        return view('admin.dashboard', compact('users', 'search'));
     }
 
     /**
@@ -113,4 +113,5 @@ class AdminController extends Controller
         // Redirect to users list with success message
         return redirect()->route('admin.index')->with('success', 'Admin deleted successfully!');
     }
+    
 }

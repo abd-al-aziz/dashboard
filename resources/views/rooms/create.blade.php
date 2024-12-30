@@ -12,11 +12,6 @@
         </div>
 
         <div class="mb-4">
-            <label for="type" class="block text-sm font-medium">Room Type</label>
-            <input type="text" name="type" id="type" class="w-full border-gray-300 rounded-lg" required>
-        </div>
-
-        <div class="mb-4">
             <label for="description" class="block text-sm font-medium">Description</label>
             <textarea name="description" id="description" class="w-full border-gray-300 rounded-lg" rows="4"></textarea>
         </div>

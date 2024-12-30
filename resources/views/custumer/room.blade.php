@@ -26,7 +26,7 @@
                         <svg width="320" height="320" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
                         </svg>
-                        <img src="assets/img/cat-3.jpg" alt="banner">
+                        <img src="assets/img/cat-0.jpg" alt="banner">
                     </div>
                 </div>
             </div>
@@ -35,63 +35,54 @@
     <img src="assets/img/hero-shaps-1.png" alt="hero-shaps" class="img-2">
     <img src="assets/img/hero-shaps-1.png" alt="hero-shaps" class="img-4">
 </section>
-<section class="gap">
+<section class="py-5">
     <div class="container">
-        <div class="package two">
-            <div class="package-text">
-                <div>
-                    <h4>JOD 5.00 <span>/ Per Day</span></h4>
-                    <h3>Economic Room</h3>
-                    <ul class="list">
-                        <li><i class="fa-solid fa-check"></i>Health Care</li>
-                        <li><i class="fa-solid fa-check"></i>Space to Play</li>
-                        <li><i class="fa-solid fa-check"></i>Grooming you can feel good about</li>
-                        <li><i class="fa-solid fa-check"></i>Space to Play</li>
-                    </ul>
-                    <a href="#" class="button">Book Room</a>
+        <div class="row g-4">
+            @foreach($rooms as $room)
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-2 border-warning shadow-sm transition-hover">
+                    <img src="assets/img/room-4.jpg" 
+                         class="card-img-top object-fit-cover" 
+                         style="height: 300px;" 
+                         alt="Room">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">JOD {{ number_format($room->price_per_night, 2) }}</h5>
+                            @if($room->is_available)
+                                <span class="badge bg-success rounded-pill px-3 py-2">Available</span>
+                            @else
+                                <span class="badge bg-danger rounded-pill px-3 py-2">Not Available</span>
+                            @endif
+                        </div>
+                        <p class="card-text">{{ $room->description }}</p>
+                        <div class="mb-4">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2 small">
+                                    <i class="fa-solid fa-check text-success me-2"></i>Health Care
+                                </li>
+                                <li class="mb-2 small">
+                                    <i class="fa-solid fa-check text-success me-2"></i>Space to Play
+                                </li>
+                                <li class="mb-2 small">
+                                    <i class="fa-solid fa-check text-success me-2"></i>Grooming
+                                </li>
+                                <li class="mb-2 small">
+                                    <i class="fa-solid fa-check text-success me-2"></i>Space to Play
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto">
+                            @if($room->is_available)
+                                <a href="" class="btn  bg-warning w-100 rounded-pill py-2 text-white">Book Room</a>
+                            @else
+                                <button class="btn btn-secondary w-100 rounded-pill py-2" disabled>Not Available</button>
+                            @endif
+                        </div>
+                    </div>
                 </div>
             </div>
-            <figure>
-                <img src="assets/img/room-3.webp" alt="Package">
-            </figure>
+            @endforeach
         </div>
-        <!-- <div class="package two">
-            <div class="package-text">
-                <div>
-                    <h4>JOD 10.00 <span>/ Per Day</span></h4>
-                    <h3>Deluxe Room</h3>
-                    <ul class="list">
-                        <li><i class="fa-solid fa-check"></i>Health Care</li>
-                        <li><i class="fa-solid fa-check"></i>Space to Play</li>
-                        <li><i class="fa-solid fa-check"></i>Grooming you can feel good about</li>
-                        <li><i class="fa-solid fa-check"></i>Space to Play</li>
-                    </ul>
-                    <a href="#" class="button">Book Room</a>
-                </div>
-            </div>
-            <figure>
-                <img src="https://via.placeholder.com/510x406" alt="Package">
-            </figure>
-        </div>
-        <div class="package two">
-            <div class="package-text">
-                <div>
-                    <h4>JOD 15.00 <span>/ Per Day</span></h4>
-                    <h3>Royal Room</h3>
-                    <ul class="list">
-                        <li><i class="fa-solid fa-check"></i>On site salon</li>
-                        <li><i class="fa-solid fa-check"></i>Experienced friendly team</li>
-                        <li><i class="fa-solid fa-check"></i>Grooming you can feel good about</li>
-                        <li><i class="fa-solid fa-check"></i>Ultimate convenience</li>
-                    </ul>
-                    <a href="#" class="button">Book Room</a>
-                </div>
-            </div>
-            <figure>
-                <img src="assets/img/room-1.jpg" alt="Package">
-            </figure>
-        </div> -->
-       
     </div>
 </section>
 @endsection

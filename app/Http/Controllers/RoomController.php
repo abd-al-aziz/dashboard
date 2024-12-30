@@ -52,7 +52,6 @@ class RoomController extends Controller
         // التحقق من صحة البيانات
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'type' => 'required|string|max:255',
             'description' => 'nullable|string',
             'price_per_night' => 'required|numeric|min:0',
             'is_available' => 'required|boolean',
@@ -61,7 +60,6 @@ class RoomController extends Controller
         // إنشاء غرفة جديدة
         Room::create([
             'name' => $request->name,
-            'type' => $request->type,
             'description' => $request->description,
             'price_per_night' => $request->price_per_night,
             'is_available' => $request->is_available,
@@ -94,7 +92,6 @@ class RoomController extends Controller
         // التحقق من صحة البيانات
         $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'type' => 'required|string|max:255',
             'description' => 'nullable|string',
             'price_per_night' => 'required|numeric|min:0',
             'is_available' => 'required|boolean',
