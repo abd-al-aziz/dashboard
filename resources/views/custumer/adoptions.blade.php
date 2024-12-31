@@ -46,36 +46,37 @@
        </div>
 
        @if($adoptions->count() > 0)
-           <div class="row">
-               @foreach($adoptions as $adoption)
-                   <div class="col-lg-3 col-md-4 col-sm-6 mb-4 ">
-                       <div class="pets card h-100 d-flex flex-column ">
-                           <img src="{{ asset('storage/'.$adoption->image) }}" class="card-img-top uniform-image" alt="{{ $adoption->name }}">
-                           <div class="card-body d-flex flex-column">
-                               <h3>{{ $adoption->name }}</h3>
-                               <p><strong>Breed:</strong> {{ $adoption->breed }}</p>
-                               <p><strong>Age:</strong> {{ $adoption->age }} Year</p>
-                               <p><strong>Personality:</strong> {{ $adoption->personality }}</p>
-                               <div class="btn-group"> 
-                                <a href="#" 
-                                 class="btn btn-warning bg-danger bg-gradient text-white w-100 adopt-btn"  
-                                 data-form-id="adopt-form-{{ $adoption->id }}">
-                                  Adopt Now
-                                 </a>
-                                <form id="adopt-form-{{ $adoption->id }}" 
-                                   action="{{ route('adoption.request', $adoption) }}" 
-                                   method="POST" style="display: none;">
-                                 @csrf
-                                </form>
-                              </div>
-                           </div>
-                       </div>
-                   </div>
-               @endforeach
-           </div>
-           <div class="mt-4 d-flex justify-content-center">
-                  {{ $adoptions->links('pagination::bootstrap-5') }}
-            </div>
+       <div class="row">
+           @foreach($adoptions as $adoption)
+           <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="pets card h-100 d-flex flex-column">
+                <img src="{{ asset('storage/'.$adoption->image) }}" class="card-img-top uniform-image" alt="{{ $adoption->name }}">
+                <div class="card-body d-flex flex-column">
+                    <h3>{{ $adoption->name }}</h3>
+                    <p><strong>Breed:</strong> {{ $adoption->breed }}</p>
+                    <p><strong>Age:</strong> {{ $adoption->age }} Year</p>
+                    <p><strong>Personality:</strong> {{ $adoption->personality }}</p>
+                    <div class="btn-group mt-auto"> 
+                        <a href="#" 
+                           class="btn btn-warning bg-danger bg-gradient text-white w-100 adopt-btn"  
+                           data-form-id="adopt-form-{{ $adoption->id }}">
+                            Adopt Now
+                        </a>
+                        <form id="adopt-form-{{ $adoption->id }}" 
+                              action="{{ route('adoption.request', $adoption) }}" 
+                              method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </div>
+            </div> 
+               </div>
+           @endforeach
+       </div>
+
+       <div class="mt-4 text-danger d-flex justify-content-center">
+           {{ $adoptions->links('pagination::bootstrap-5') }}
+       </div>
        @else
            <div class="text-center py-5">
                <div class="alert alert-info">
@@ -85,8 +86,8 @@
            </div>
        @endif
    </div>
-   
 </section>
+
 <style>
     .uniform-image {
         width: 100%;

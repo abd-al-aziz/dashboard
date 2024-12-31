@@ -43,7 +43,6 @@ class BookingController extends Controller
             // تحميل العلاقات الخاصة بالـ user, pet, room
             ->with(['user', 'pet', 'room'])
             ->paginate(5);
-
         // إرجاع العرض مع البيانات
         return view('bookings.index', compact('bookings', 'search'));
     }

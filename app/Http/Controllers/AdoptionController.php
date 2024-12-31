@@ -85,4 +85,4 @@ class AdoptionController extends Controller
     $adoption->update(['is_adopted' => true]);
     return redirect()->back()->with('success', 'Adoption request submitted successfully.');
 }
-}
+} 

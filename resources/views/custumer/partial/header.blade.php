@@ -1,3 +1,15 @@
+<style>
+  .logo {
+        margin-right: 20px;
+    }
+
+    .logo img {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+
+    }
+    </style>
 <header>
   <div class="top-bar">
     <div class="container">
@@ -12,8 +24,10 @@
   </div>
   <div class="container">
     <div class="bottom-bar">
-      <a href="index.html"><img src="assets/img/logo_smaller.jpg" alt="logo"></a>
-        <nav class="navbar">
+    <div class="logo">
+            <a href="{{ route('home') }}"><img src="{{ asset('assets/img/loogo.jpg') }}" alt="Logo"></a>
+        </div>
+        <nav class="navbar flex-grow-2 justify-content-center">
           <ul class="navbar-links">
             <li class="navbar-dropdown">
               <a href="{{ route('home') }}">Home</a>
@@ -36,11 +50,12 @@
             <li class="navbar-dropdown">
               <a href="{{ route('contacts') }}">Contact Us</a>
             </li>
+            
 
             <!-- If user is authenticated, show Profile and Logout options -->
             @if (Auth::check())
               <li class="navbar-dropdown">
-                <a href=""><i class="fa-solid fa-user"></i></a>
+                <a href="{{ route('profile.show') }}"><i class="fa-solid fa-user"></i></a>
               </li>
               <!-- Logout Form -->
               <li class="navbar-dropdown">

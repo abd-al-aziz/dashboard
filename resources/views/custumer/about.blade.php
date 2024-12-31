@@ -55,15 +55,9 @@
                     Three years of hard work and joy, of stress and happiness, of challenges and giving.
                     Three years, and every moment has been a translation of the love I have for these creatures that I can’t imagine a single day of my life without!
                     </p>
-                    <!-- <ul class="list">
-                        <li><img src="assets/img/list.png" alt="list">Graceful goldfish, to small, cute kittens</li>
-                        <li><img src="assets/img/list.png" alt="list">Feeders are either veterinary qualified staf</li>
-                        <li><img src="assets/img/list.png" alt="list">Experienced pet owners and animal lovers</li>
-                        <li><img src="assets/img/list.png" alt="list"></li>
-                    </ul> -->
+                   
                     <div class="company-oner position-relative">
                         <img src="assets/img/owner-1.jpg" alt="girl">
-                        <!-- <svg width="116" height="116" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg"> -->
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#000"></path>
                         </svg>
                         <div>
@@ -75,88 +69,13 @@
             </div>
             <div class="col-lg-6">
                 <div class="dogs-img">
-                    <img src="assets/img/about-1.jpg" alt="dogs">
+                    <img src="assets/img/about-1.jpg" alt="dogs" style="border-radius: 15px; overflow: hidden;">
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- <section style="background-image: url(assets/img/healthy-product.png); background-color: #f5f5f5;" class="gap care-services">
-    <div class="container">
-        <div class="heading">
-            <img src="assets/img/heading-img.png" alt="heading-img">
-            <h6>What We Provide</h6>
-            <h2>Pet Care Services</h2>
-        </div>
-        <div class="row">
-                    <div class="col-lg-3 p-lg-0 col-md-6 col-sm-6">
-                            <div class="pet-grooming">
-                            <i><img src="assets/img/welcome-to-3.png" alt="icon"></i>
-                            <svg width="138" height="138" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#940c69"></path>
-                            </svg>
-                            <a href="#"><h4>Online Order</h4></a>
-                            <p>Lorem ipsum dolor sit amet ur adipiscing elit, sed do eiu incididunt ut labore et.</p>
-                            </div>
-                    </div>
-                    <div class="col-lg-3 p-lg-0 col-md-6 col-sm-6">
-                            <div class="pet-grooming">
-                            <i><img src="assets/img/welcome-to-1.png" alt="icon"></i>
-                            <svg width="138" height="138" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#940c69"></path>
-                            </svg>
-                            <a href="#"><h4>Pet Grooming</h4></a>
-                            <p>Lorem ipsum dolor sit amet ur adipiscing elit, sed do eiu incididunt ut labore et.</p>
-                            </div>
-                    </div>
-                    <div class="col-lg-3 p-lg-0 col-md-6 col-sm-6">
-                            <div class="pet-grooming">
-                            <i><img src="assets/img/welcome-to-4.png" alt="icon"></i>
-                            <svg width="138" height="138" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#940c69"></path>
-                            </svg>
-                            <a href="#"><h4>Pet Boarding</h4></a>
-                            <p>Lorem ipsum dolor sit amet ur adipiscing elit, sed do eiu incididunt ut labore et.</p>
-                            </div>
-                    </div>
-                    <div class="col-lg-3 p-lg-0 col-md-6 col-sm-6">
-                            <div class="pet-grooming">
-                            <i><img src="assets/img/welcome-to-2.png" alt="icon"></i>
-                            <svg width="138" height="138" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#940c69"></path>
-                            </svg>
-                            <a href="#"><h4>Dog Walking</h4></a>
-                            <p>Lorem ipsum dolor sit amet ur adipiscing elit, sed do eiu incididunt ut labore et.</p>
-                            </div>
-                    </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-lg-6 col-md-6">
-                <div class="video position-relative">
-                        <figure>
-                            <img src="https://via.placeholder.com/636x452" alt="img">
-                        </figure>
-                    </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="video position-relative">
-                        <a data-fancybox="" href="https://www.youtube.com/watch?v=xKxrkht7CpY">
-                            <i>
-                              <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M11 8.49951L0.5 0.27227L0.5 16.7268L11 8.49951Z" fill="#000"></path>
-                              </svg>
-                            </i>
-                        </a>
-                        <figure>
-                            <img src="https://via.placeholder.com/636x452" alt="img">
-                        </figure>
-                    </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<section class="gap no-bottom">
+<section class="gap">
     <div class="container">
         <div class="heading">
             <img src="assets/img/heading-img.png" alt="heading-img">
@@ -173,8 +92,6 @@
                     <span>Veterinary Assistant</span>
                     <a href="#"><h4>Loya Raed</h4></a>
                     <ul class="social-icon">
-                        <!-- <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li> -->
                     </ul>
                 </div>
             </div>
@@ -187,8 +104,6 @@
                     <span>Veterinary Assistant</span>
                     <a href="#"><h4>Hamzeh al Tall</h4></a>
                     <ul class="social-icon">
-                        <!-- <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li> -->
                     </ul>
                 </div>
             </div>
@@ -201,68 +116,13 @@
                     <span>Reception</span>
                     <a href="#"><h4>Noor Alkhalil</h4></a>
                     <ul class="social-icon">
-                        <!-- <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li> -->
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- <section class="gap">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="count-text">
-                    <img alt="img" src="assets/img/fun-facts-1.png">
-                   <div>
-                   <div class="d-flex justify-content-center">
-                        <h2 class="count" data-number="100" ></h2>
-                        <span>+</span>
-                   </div>
-                   <h3 class="text">Client Served</h3>
-                   </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="count-text">
-                    <img alt="img" src="assets/img/fun-facts-2.png">
-                   <div>
-                   <div class="d-flex justify-content-center">
-                        <h2 class="count" data-number="99" ></h2>
-                        <span>%</span>
-                   </div>
-                   <h3 class="text">Client Served</h3>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="count-text mb-sm-0">
-                    <img alt="img" src="assets/img/fun-facts-3.png">
-                   <div>
-                   <div class="d-flex justify-content-center">
-                        <h2 class="count" data-number="2" ></h2>
-                        <span>k</span>
-                   </div>
-                   <h3 class="text">Client Served</h3>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="count-text mb-0">
-                    <img alt="img" src="assets/img/fun-facts-4.png">
-                   <div>
-                   <div class="d-flex justify-content-center">
-                        <h2 class="count" data-number="400" ></h2>
-                        <span>+</span>
-                   </div>
-                   <h3 class="text">Client Served</h3>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>  -->
+
 <section class="gap section-client" style="background-image: url(assets/img/client-b.jpg)">
     <div class="container">
         <div class="heading two">
@@ -314,16 +174,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="rated">
-            <ul class="star">
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-                <li><i class="fa-solid fa-star"></i></li>
-            </ul>
-            <h4>Rated 4.5 Out of 5.0</h4>
-        </div> -->
     </div>
 </section>
 @endsection

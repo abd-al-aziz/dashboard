@@ -55,8 +55,7 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#000"></path>
                 </svg>
                     <a href="#"><h4>Space to Play</h4></a>
-                    <p>When you want to provide a place for your cat to live
-                    Always choose the place where the cat is most comfortable, not the place where you feel most comfortable! Cats can behave unusually when their location changes. At Mau😺, we have over 7 years of experience in dealing with cats and pets. We have designed rooms to meet their needs and nature, ensuring their comfort during their stay.🐱🐈</p>
+                    <p>When you want to provide a place for your cat to live Always choose the place where the cat is most comfortable, not the place where you feel most comfortable! Cats can behave unusually when their location changes. At Mau😺, we have over 7 years of experience in dealing with cats and pets. We have designed rooms to meet their needs and nature, ensuring their comfort during their stay.🐱🐈</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -73,7 +72,7 @@
             </div>
             <div class="col-lg-12">
                 <div class="video position-relative">
-                        <a data-fancybox="" href="https://www.youtube.com/watch?v=xKxrkht7CpY">
+                        <a data-fancybox="" href="assets/img/video.mp4">
                             <i>
                               <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M11 8.49951L0.5 0.27227L0.5 16.7268L11 8.49951Z" fill="#000"></path>
@@ -81,7 +80,7 @@
                             </i>
                         </a>
                         <figure>
-                            <img src="https://via.placeholder.com/1256x554" alt="img">
+                            <img src="assets/img/home-1.jpg" alt="img">
                         </figure>
                     </div>
             </div>

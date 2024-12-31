@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\UserAuthController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\RoomController;
@@ -22,6 +21,7 @@ use App\Http\Controllers\custumer\RoomsController;
 use App\Http\Controllers\custumer\PhotosController;
 use App\Http\Controllers\custumer\ContactController;
 use App\Http\Controllers\custumer\AdoptionsController;
+use App\Http\Controllers\custumer\ProfileController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 /*
@@ -49,9 +49,8 @@ require __DIR__ . '/auth.php';
 
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+    Route::put('/profile', [ProfileController::class, 'update'])->name('profile.update');
 });
 
 /*
@@ -65,7 +64,7 @@ Route::prefix('admin')->group(function () {
     Route::post('logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
     Route::middleware(['auth:admin'])->group(function () {
-        Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
         Route::get('admin.dashboard-alt', function () {
             return view('admin.dashboard');
         })->name('admin.dashboard.alt');

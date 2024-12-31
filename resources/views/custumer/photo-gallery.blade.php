@@ -122,8 +122,8 @@
 </div><div class="gap no-top">
     <div class="container">
         <div class="insta-img">
-            <h3><i class="fa-brands fa-instagram"></i>Follow @domain.com</h3>
-            <a href="#" class="button">Follow Us</a>
+            <h3><i class="fa-brands fa-instagram"></i>Follow @mau_arabian_cat</h3>
+            <a href="https://www.instagram.com/mau_arabian_cat?igsh=MThkY2VraTR5ZGh4MQ==" class="button">Follow Us</a>
         </div>
             <ul class="image-gallery">
               <li>

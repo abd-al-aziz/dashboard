@@ -26,7 +26,7 @@
                     <div class="flex items-center space-x-4">
                        
                         <div class="flex items-center space-x-4">
-                          <a href="{{ route('profile.edit') }}" class="flex items-center space-x-3 hover:underline">
+                          <a href="" class="flex items-center space-x-3 hover:underline">
                              <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-8 h-8 rounded-full">
                               <span class="text-sm font-medium text-gray-900">Admin</span>
                           </a>

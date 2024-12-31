@@ -4,7 +4,7 @@
             <div class="col-xl-4 col-lg-6">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/img/logo_smaller.jpg" alt="logo">
+                        <img src="assets/img/loogo.jpg" alt="logo">
                     </a>
                     <p>A cat hotel provides the best staying and boarding service in healthy and comfortable environment.</p>
                     <div class="phone">
@@ -38,7 +38,7 @@
                           <div class="call-us">
                               <img src="assets/img/hadphon.png" alt="hadphon">
                               <div>
-                                  <a href="#">07 9535 6863</a>
+                                  <a href="">07 9535 6863</a>
                                   <span>Got Questions? Call us 24/7</span>
                               </div>
                           </div>
