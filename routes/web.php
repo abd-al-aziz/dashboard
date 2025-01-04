@@ -22,6 +22,7 @@ use App\Http\Controllers\custumer\PhotosController;
 use App\Http\Controllers\custumer\ContactController;
 use App\Http\Controllers\custumer\AdoptionsController;
 use App\Http\Controllers\custumer\ProfileController;
+use App\Http\Controllers\custumer\BookingsController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 /*
@@ -39,7 +40,13 @@ Route::get('/room', [RoomsController::class, 'index'])->name('rooms');
 Route::get('/photo-gallery', [PhotosController::class, 'index'])->name('photo-gallery');
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
 Route::get('/adoptions', [AdoptionsController::class, 'index'])->name('adoptions');
-
+Route::get('/booking/{room}', [BookingsController::class, 'create'])->name('custumer.bookings.create');
+Route::post('custumer/booking/{room}', [BookingsController::class, 'store'])->name('custumer.bookings.store');
+Route::get('/checkout/{room_id}', [BookingsController::class, 'show'])->name('custumer.checkout');
+Route::post('/custumer/booking/{room}', [BookingsController::class, 'store'])->name('custumer.bookings.store');
+Route::get('/booking-success', function () {
+    return view('custumer.booking-success');
+})->name('booking.success');
 /*
 |--------------------------------------------------------------------------
 | Authentication Routes
@@ -58,6 +65,8 @@ Route::middleware('auth')->group(function () {
 | Admin Routes
 |--------------------------------------------------------------------------
 */
+Route::post('/bookings/store', [BookingController::class, 'store'])->name('bookings.store');
+
 Route::prefix('admin')->group(function () {
     Route::get('login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
     Route::post('login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
@@ -73,7 +82,6 @@ Route::prefix('admin')->group(function () {
         // Bookings
         Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
         Route::get('/bookings/create', [BookingController::class, 'create'])->name('bookings.create');
-        Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
         Route::get('/bookings/edit/{booking}', [BookingController::class, 'edit'])->name('bookings.edit');
         Route::put('/bookings/{booking}', [BookingController::class, 'update'])->name('bookings.update');
         Route::delete('/bookings/destroy/{id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
@@ -100,6 +108,7 @@ Route::prefix('admin')->group(function () {
         // Adoption
         Route::resource('adoption', AdoptionController::class);
         Route::post('/adoption/request/{adoption}', [AdoptionController::class, 'requestAdoption'])->name('adoption.request');
+
 
         // Services
         Route::resource('service', ServiceController::class);

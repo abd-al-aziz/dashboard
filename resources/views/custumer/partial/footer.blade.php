@@ -1,10 +1,10 @@
-<footer style="background-color: #fff8e5; background-image:url(assets/img/background.png)">
+<footer style="background-color: #fff8e5; background-image:url({{ asset('assets/img/banner.png') }})">
     <div class="container">
         <div class="row">
             <div class="col-xl-4 col-lg-6">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/img/loogo.jpg" alt="logo">
+                        <img src="{{ asset('assets/img/loogo.jpg') }}" alt="logo">
                     </a>
                     <p>A cat hotel provides the best staying and boarding service in healthy and comfortable environment.</p>
                     <div class="phone">
@@ -36,7 +36,7 @@
                           <h6 class="pt-0">Saturday - Thursday <span>11AM - 7PM</span></h6>
                           <h6>Friday<span>12:30AM - 06PM</span></h6>
                           <div class="call-us">
-                              <img src="assets/img/hadphon.png" alt="hadphon">
+                              <img src="{{ asset('assets/img/hadphon.png') }}" alt="hadphon">
                               <div>
                                   <a href="">07 9535 6863</a>
                                   <span>Got Questions? Call us 24/7</span>
@@ -55,9 +55,9 @@
             
         </div>
     </div>
-    <img src="assets/img/hero-shaps-1.png" alt="hero-shaps" class="img-2">
-    <img src="assets/img/dabal-foot-1.png" alt="hero-shaps" class="img-3">
-    <img src="assets/img/hero-shaps-1.png" alt="hero-shaps" class="img-4">
+    <img src="{{ asset('assets/img/hero-shaps-1.png') }}" alt="hero-shaps" class="img-2">
+    <img src="{{ asset('assets/img/dabal-foot-1.png') }}" alt="hero-shaps" class="img-3">
+    <img src="{{ asset('assets/img/hero-shaps-1.png" alt="hero-shaps') }}" class="img-4">
 </footer>
 <div id="progress">
       <span id="progress-value"><i class="fa-solid fa-up-long"></i></span>

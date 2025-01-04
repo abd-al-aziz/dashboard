@@ -7,10 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Room extends Model
 {
-    public function bookings()
-    {
-        return $this->hasMany(Booking::class);
-    }
+    
     protected $fillable = [
         
         'name',
@@ -19,5 +16,8 @@ class Room extends Model
         'price_per_night',
         'is_available',
     ];
-
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
 }

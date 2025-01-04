@@ -12,6 +12,7 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+    
     protected $table = 'users';
 
     /**
@@ -43,4 +44,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * العلاقة بين المستخدم والحيوانات الأليفة.
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function pets()
+    {
+        return $this->hasMany(Pet::class); 
+    }
+    public function booking()
+    {
+        return $this->hasMany(Booking::class);
+    }
 }

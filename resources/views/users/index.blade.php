@@ -10,9 +10,9 @@
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition">Search</button>
         </form>
 
-        <a href="{{ route('users.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition flex items-center">
+        <!-- <a href="{{ route('users.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition flex items-center">
             <i class="bi bi-plus-circle"></i> Add User
-        </a>
+        </a> -->
     </div>
 
     @if($users->isEmpty())
@@ -24,7 +24,7 @@
             <table class="min-w-full table-auto bg-white rounded-lg shadow-md">
                 <thead class="bg-gray-200">
                     <tr>
-                        <th class="px-4 py-2 text-gray-800 text-left">#</th>
+                        <th class="px-4 py-2 text-gray-800 text-left">Id</th>
                         <th class="px-4 py-2 text-gray-800 text-left">Name</th>
                         <th class="px-4 py-2 text-gray-800 text-left">Email</th>
                         <th class="px-4 py-2 text-gray-800 text-center">Actions</th>

@@ -7,10 +7,9 @@ use App\Models\Adoption;
 
 class AdoptionsController extends Controller
 {
-    // تأكد من أن المستخدم مسجل الدخول قبل الوصول إلى هذا الأكشن
     public function __construct()
     {
-        $this->middleware('auth'); // هذا يضمن أن المستخدم مسجل دخول قبل الوصول
+        $this->middleware('auth'); 
     }
 
     public function index()

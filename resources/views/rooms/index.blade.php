@@ -43,14 +43,19 @@
                     <td class="px-4 py-2 text-gray-700">
                         {{ $room->is_available ? 'Yes' : 'No' }}
                     </td>
-                    <td class="px-4 py-2">
-                        <a href="{{ route('rooms.edit', $room->id) }}" class="bg-yellow-500 text-white px-2 py-1 me-4 rounded-md hover:bg-yellow-600 transition"><i class="bi bi-pencil-square"></i></a>
-                        <form action="{{ route('rooms.destroy', $room->id) }}" method="POST" class="inline-block ml-2">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600 transition" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
-                        </form>
-                    </td>
+                    <td class="px-4 py-2 text-gray-700 flex space-x-2">
+    <a href="{{ route('rooms.edit', $room->id) }}" class="bg-yellow-500 text-white px-2 py-1 rounded-md hover:bg-yellow-600 transition">
+        <i class="bi bi-pencil-square"></i>
+    </a>
+    <form action="{{ route('rooms.destroy', $room->id) }}" method="POST" class="inline-block">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600 transition" onclick="return confirm('Are you sure?')">
+            <i class="bi bi-trash"></i>
+        </button>
+    </form>
+</td>
+
                 </tr>
             @endforeach
         </tbody>

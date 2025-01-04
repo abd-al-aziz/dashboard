@@ -50,14 +50,14 @@
                     <td class="px-4 py-2 text-gray-700">{{ $adoption->personality }}</td>
                     <td class="px-4 py-2 flex space-x-2">
                         <!-- Edit Button -->
-                        <a href="{{ route('adoption.edit', $adoption->id) }}" class="bg-yellow-500 text-white px-2 py-1 rounded-md hover:bg-yellow-600 transition">Edit</a>
+                        <a href="{{ route('adoption.edit', $adoption->id) }}" class="bg-yellow-500 text-white px-2 py-1 rounded-md hover:bg-yellow-600 transition"><i class="bi bi-pencil-square"></i></a>
 
                         <!-- Delete Button -->
                         <form method="POST" action="{{ route('adoption.destroy', $adoption->id) }}" class="inline">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="bg-red-500 text-white px-2 py-1 rounded-md hover:bg-red-600 transition" onclick="return confirm('Are you sure you want to delete this request?')">
-                                Delete
+                            <i class="bi bi-trash"></i>
                             </button>
                         </form>
                     </td>

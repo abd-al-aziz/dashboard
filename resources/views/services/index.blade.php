@@ -28,11 +28,11 @@
                     <td class="px-4 py-2">${{ number_format($service->price, 2) }}</td>
                     <td class="px-4 py-2">{{ $service->status ? 'Active' : 'Inactive' }}</td>
                     <td class="px-4 py-2">
-                        <a href="" class="bg-yellow-500 text-white px-2 py-1 rounded-md">Edit</a>
+                        <a href="" class="bg-yellow-500 text-white px-2 py-1 me-4 rounded-md hover:bg-yellow-600 transition"><i class="bi bi-pencil-square"></i></a>
                         <form action="" method="POST" class="inline-block">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="bg-red-500 text-white px-2 py-1 rounded-md">Delete</button>
+                            <button type="submit" class="bg-red-500 text-white px-2 py-1 rounded-md"><i class="bi bi-trash"></i></button>
                         </form>
                     </td>
                 </tr>

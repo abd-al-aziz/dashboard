@@ -62,7 +62,7 @@
     }
 
     .register-box { 
-        background: #940c69;
+        background: #fa441d;
         color: white;
         animation-delay: 0.4s;
     }
@@ -110,7 +110,7 @@
     }
 
     .forgot-link {
-        color: #ff5722;
+        color: #ffc107;
         text-decoration: none;
         transition: color 0.3s;
     }
@@ -121,8 +121,9 @@
 
     .submit-btn {
         width: 100%;
-        padding: 12px;
-        background: #ff5722;
+        height: 50px;
+        padding: 15px;
+        background: #ffc107 !important;
         color: white;
         border: none;
         border-radius: 25px;
@@ -134,8 +135,8 @@
     }
 
     .submit-btn:hover {
-        background: #f4511e;
-        transform: translateY(-2px);
+        background: #ffc107 !important;
+        /* transform: translateY(-2px); */
     }
 
     .submit-btn::after {
@@ -296,6 +297,15 @@
     </section>
 
 <script>
+    function validateLoginForm() {
+        let email = document.getElementById('loginEmail').value;
+        let password = document.getElementById('loginPassword').value;
+        if (!email || !password) {
+            alert('Please fill in all fields');
+            return false;
+        }
+        return true;
+    }
 
     function validateRegisterForm() {
         let password = document.getElementById('registerPassword').value;

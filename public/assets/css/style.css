@@ -2370,10 +2370,10 @@ button.nav-link.active i {
 }
 input[type="text"] {
     border-radius: 50px;
-    width: 100%;
+    width: 50%;
     height: 50px;
     padding-left: 30px;
-    border: 0;
+    border: ;
     outline: none;
     font-size: 16px;
 }
@@ -3838,7 +3838,7 @@ ol.breadcrumb li {
     font-weight: 600;
 }
 ol.breadcrumb li a{
-    color: #000;
+    color: red;
 }
 .breadcrumb-item.active {
     color: #000;
@@ -3886,6 +3886,7 @@ ol.breadcrumb {
 }
 .banner-img img {
     border-radius: 50%;
+    
 }
 .banner-img {
     margin-right: auto;
@@ -3895,6 +3896,7 @@ ol.breadcrumb {
 }
 .banner-text h2 {
     text-transform: capitalize;
+    margin-left: 40px;
 }
 .our-blog h3{
     font-weight: bold;
@@ -4521,7 +4523,7 @@ h3.history {
     transform: rotateY(180deg);
 }
 .package.two:nth-child(2){
-    background-color: #edffed;
+    /* background-color: #edffed; */
 }
 .package.two:nth-child(3){
     background-color: #fffec9;
@@ -4635,13 +4637,13 @@ footer.three {
 }
 .banner img.img-2 {
     position: absolute;
-    top: 20%;
-    right: 3%;
+    top: 10%;
+    right: 6%;
     animation: top-bottom 3s infinite;
 }
 .banner img.img-4 {
     position: absolute;
-    top: 31%;
+    top: 21%;
     transform: rotate(78deg);
 }
 /* 80. products-section */

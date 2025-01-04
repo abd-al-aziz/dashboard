@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     public function show()
     {
-        return view('custumer.profile.show', [
+        return view('profile.edit', [
             'user' => Auth::user(),
         ]);
     }
