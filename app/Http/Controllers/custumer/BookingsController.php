@@ -32,14 +32,11 @@ class BookingsController extends Controller
 
     public function store(Request $request, Room $room)
     {
-        // dd($room);
-        // التحقق من صحة البيانات الأساسية
         $request->validate([
             'start_date' => 'required|date',
             'end_date' => 'required|date|after:start_date',
         ]);
     
-        // التحقق من تسجيل الدخول
         if (!auth()->check()) {
             return redirect()->route('login')->with('error', 'يجب تسجيل الدخول أولاً.');
         }
@@ -48,7 +45,6 @@ class BookingsController extends Controller
     
         try {
             if ($request->pet_option === 'new_pet') {
-                // التحقق من صحة البيانات المدخلة للحيوان الجديد
                 $request->validate([
                     'new_pet_name' => 'required|string|max:255',
                     'new_pet_age' => 'required|integer|min:0',
@@ -63,7 +59,6 @@ class BookingsController extends Controller
                 }else {
                     $imagePath = null;
                 }
-                // إنشاء حيوان جديد
                 $pet = Pet::create([
                     'user_id' => auth()->id(),
                     'name' => $request->new_pet_name,
@@ -86,24 +81,21 @@ class BookingsController extends Controller
                 $petId = $request->pet_id;
     
             } else {
-                // في حالة عدم اختيار أي خيار
                 return redirect()->back()->with('error', 'الرجاء اختيار حيوان أو إضافة حيوان جديد.');
             }
     
-            // حساب السعر بناءً على عدد الأيام
             $startDate = Carbon::parse($request->start_date);
             $endDate = Carbon::parse($request->end_date);
             $totalDays = $endDate->diffInDays($startDate);
             $totalPrice = $totalDays * $room->price_per_night;
     
-            // إنشاء الحجز
             Booking::create([
-                'user_id' => auth()->id(), // معرف المستخدم الحالي
-                'pet_id' => $petId,        // معرف الحيوان (سواء كان جديدًا أو موجودًا)
-                'room_id' => $room->id,    // معرف الغرفة
+                'user_id' => auth()->id(), 
+                'pet_id' => $petId,     
+                'room_id' => $room->id,    
                 'start_date' => $request->start_date,
                 'end_date' => $request->end_date,
-                'total_price' => $totalPrice, // السعر المحسوب
+                'total_price' => $totalPrice, 
             ]);
             $room->is_available = false;
             $room->save();

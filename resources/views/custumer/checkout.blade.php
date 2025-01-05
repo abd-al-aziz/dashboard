@@ -8,12 +8,12 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="banner-text">
-                    <br><h2>Rooms</h2>
+                    <br><h2>Checkout</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="index.html">Home</a>
                         </li>
-                        <li class="breadcrumb-item active" aria-current="page">Rooms</li>
+                        <li class="breadcrumb-item active" aria-current="page">Checkout</li>
                     </ol>
                 </div>
             </div>
@@ -41,8 +41,7 @@
 
 <div class="container">
     <div class="heading">
-        <h2>Checkout</h2>
-        <p> {{ $room->name }} - JOD {{ number_format($room->price_per_night, 2) }} per night</p>
+        <br><h2>Checkout :</h2>
     </div>
 
     <form action="{{ route('custumer.bookings.store', $room->id) }}" enctype="multipart/form-data" method="POST" >

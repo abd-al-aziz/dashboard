@@ -47,7 +47,7 @@
         <div class="heading">
             <img src="assets/img/heading-img.png" alt="heading-img">
             <h6>Cats seeking a forever home</h6>
-            <h2>Looking For A New Pet</h2>
+            <h2>Looking For A Room For Your Pet</h2>
         </div>
         <div class="package two">
             <div class="package-text">
@@ -126,7 +126,7 @@
         </div>
         <div class="heading">
             <br><a href="{{ route('adoptions') }}" class="button">
-                Explore Now
+                Adopt Now
             </a>
         </div>
     </div>

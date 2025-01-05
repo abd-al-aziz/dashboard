@@ -10,8 +10,7 @@ class RoomsController extends Controller
 {
     public function index()
     {
-        $rooms = Room::all(); // سيجلب كل الغرف بغض النظر عن حالتها
-        
+        $rooms = Room::paginate(10);         
         return view('custumer.room', compact('rooms'));
     }
 }

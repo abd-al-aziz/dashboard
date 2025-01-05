@@ -120,7 +120,12 @@
     </div>
 </div>
 @endforeach
+<div class="mt-4 text-danger d-flex justify-content-center">
+        {{ $rooms->links('pagination::bootstrap-5') }}
+
+            </div>
         </div>
+        
     </div>
 </section>
 
