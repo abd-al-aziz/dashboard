@@ -19,9 +19,9 @@
         </form>
 
         <!-- زر إضافة حجز جديد -->
-        <div class="mb-4">
+        <!-- <div class="mb-4">
             <a href="{{ route('bookings.create') }}" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Add New Booking</a>
-        </div>
+        </div> -->
     </div>
 
     <!-- عرض الرسائل الناجحة -->

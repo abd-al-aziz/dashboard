@@ -240,18 +240,7 @@
                             <span>Welcome, {{ Auth::user()->name }}</span>
                         </a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-lock"></i>
-                            <span></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-bell"></i>
-                            <span></span>
-                        </a>
-                    </li> -->
+                   
                 </ul>
             </nav>
         </aside>

@@ -2370,7 +2370,7 @@ button.nav-link.active i {
 }
 input[type="text"] {
     border-radius: 50px;
-    width: 50%;
+    /* width: 50%; */
     height: 50px;
     padding-left: 30px;
     border: ;

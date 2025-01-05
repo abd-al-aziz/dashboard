@@ -102,7 +102,7 @@
                     <div class="pets">
                         <img src="assets/img/g-7.jpg" alt="pets" class="img-fluid">
                         <h3><a href="#">Russi</a></h3>
-                        <h6>Russi</h6>
+                        <h6>Skotch</h6>
                         <span>2 - 3 years</span>
                     </div>
                 </div>

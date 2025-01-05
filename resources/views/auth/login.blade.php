@@ -1,3 +1,161 @@
+@extends('custumer.master')
+@section('Contact')
+<section class="banner" style="background-color: #fff8e5; background-image:url(assets/img/banner.png)">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="banner-text">
+                    <h2>Login</h2>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">login</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="banner-img">
+                    <div class="banner-img-1">
+                        <svg width="260" height="260" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
+                        </svg>
+                        <img src="assets/img/cat-1.jpg" alt="banner">
+                    </div>
+                    <div class="banner-img-2">
+                        <svg width="320" height="320" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
+                        </svg>
+                        <img src="assets/img/cat-0.jpg" alt="banner">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="assets/img/hero-shaps-1.png" alt="hero-shaps" class="img-2">
+    <img src="assets/img/hero-shaps-1.png" alt="hero-shaps" class="img-4">
+</section>
+
+<section class="auth-section">
+    <div class="container">
+        <div class="forms-wrapper">
+            <div class="form-box login-box">
+                <h2 class="form-title">Log In Your Account</h2>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form method="POST" action="{{ route('login') }}" onsubmit="return validateLoginForm()">
+                    @csrf
+                    <div class="form-group">
+                        <input type="email" 
+                               class="input-field @error('email') is-invalid @enderror" 
+                               name="email" 
+                               id="loginEmail"
+                               value="{{ old('email') }}"
+                               placeholder="Username or email address"
+                               required>
+                        @error('email')
+                            <span class="invalid-feedback">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" 
+                               class="input-field @error('password') is-invalid @enderror" 
+                               name="password"
+                               id="loginPassword"
+                               placeholder="Password"
+                               required>
+                        @error('password')
+                            <span class="invalid-feedback">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="remember-row">
+                        <div class="remember-check">
+                            <input id="remember_me" 
+                                   type="checkbox" 
+                                   name="remember" 
+                                   value="1">
+                            <label for="remember_me">Remember Me</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+            </div>
+
+            <div class="form-box register-box">
+                <h2 class="form-title">Create Account</h2>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form method="POST" action="{{ route('register') }}" onsubmit="return validateRegisterForm()">
+                    @csrf
+                    <div class="form-group">
+                        <input type="text" 
+                               class="input-field @error('name') is-invalid @enderror" 
+                               name="name" 
+                               value="{{ old('name') }}"
+                               placeholder="User Name" 
+                               required>
+                        @error('name')
+                            <span class="invalid-feedback">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" 
+                               class="input-field @error('email') is-invalid @enderror" 
+                               name="email" 
+                               value="{{ old('email') }}"
+                               placeholder="Email Address" 
+                               required>
+                        @error('email')
+                            <span class="invalid-feedback">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" 
+                               class="input-field @error('password') is-invalid @enderror" 
+                               name="password" 
+                               id="registerPassword"
+                               placeholder="Password"
+                               required>
+                        @error('password')
+                            <span class="invalid-feedback">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" 
+                               class="input-field" 
+                               name="password_confirmation" 
+                               id="confirmPassword"
+                               placeholder="Confirm Password"
+                               required>
+                    </div>
+
+                    <p class="privacy-text">By signing up, you agree to our <a href="#">Terms & Conditions</a></p>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
 <style>
     .login-box {
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -185,138 +343,101 @@
     }
 </style>
 
-<body>
-@extends('custumer.master')
-@section('Contact')
-<section class="banner" style="background-color: #fff8e5; background-image:url(assets/img/banner.png)">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="banner-text">
-                    <h2>Login</h2>
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item">
-                        <a href="index.html">Home</a>
-                      </li>
-                        <li class="breadcrumb-item active" aria-current="page">login</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="banner-img">
-                    <div class="banner-img-1">
-                        <svg width="260" height="260" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
-                        </svg>
-                        <img src="assets/img/cat-1.jpg" alt="banner">
-                    </div>
-                    <div class="banner-img-2">
-                        <svg width="320" height="320" viewBox="0 0 673 673" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.82698 416.603C-19.0352 298.701 18.5108 173.372 107.497 90.7633L110.607 96.5197C24.3117 177.199 -12.311 298.935 15.0502 413.781L9.82698 416.603ZM89.893 565.433C172.674 654.828 298.511 692.463 416.766 663.224L414.077 658.245C298.613 686.363 175.954 649.666 94.9055 562.725L89.893 565.433ZM656.842 259.141C685.039 374.21 648.825 496.492 562.625 577.656L565.413 582.817C654.501 499.935 691.9 374.187 662.536 256.065L656.842 259.141ZM581.945 107.518C499.236 18.8371 373.997 -18.4724 256.228 10.5134L259.436 16.4515C373.888 -10.991 495.248 25.1518 576.04 110.708L581.945 107.518Z" fill="#fa441d"></path>
-                        </svg>
-                        <img src="assets/img/cat-0.jpg" alt="banner">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <img src="assets/img/hero-shaps-1.png" alt="hero-shaps" class="img-2">
-    <img src="assets/img/hero-shaps-1.png" alt="hero-shaps" class="img-4">
-</section>
-    <section class="auth-section">
-        <div class="container">
-            <div class="forms-wrapper">
-                <div class="form-box login-box">
-                    <h2 class="form-title">Log In Your Account</h2>
-                    <form method="POST" action="{{ route('login') }}" onsubmit="return validateLoginForm()">
-                        @csrf
-                        <input type="email" 
-                               class="input-field" 
-                               name="email" 
-                               id="loginEmail"
-                               placeholder="Username or email address"
-                               required>
-                        
-                        <input type="password" 
-                               class="input-field" 
-                               name="password"
-                               id="loginPassword"
-                               placeholder="Password"
-                               required>
-                        
-                        <div class="remember-row">
-                            <div class="remember-check">
-                                <input id="remember_me" 
-                                       type="checkbox" 
-                                       name="remember" 
-                                       value="1">
-                                <label for="remember_me">Remember Me</label>
-                            </div>
-                            <a href="{{ route('password.request') }}" class="forgot-link">Forgot password?</a>
-                        </div>
-                        <button type="submit" class="submit-btn">Login</button>
-                    </form>
-                </div>
-
-                <div class="form-box register-box">
-                    <h2 class="form-title">Create Account</h2>
-                    <form method="POST" action="{{ route('register') }}" onsubmit="return validateRegisterForm()">
-                        @csrf
-                        <input type="text" 
-                               class="input-field" 
-                               name="name" 
-                               placeholder="User Name" 
-                               required>
-
-                        <input type="email" 
-                               class="input-field" 
-                               name="email" 
-                               placeholder="Email Address" 
-                               required>
-
-                        <input type="password" 
-                               class="input-field" 
-                               name="password" 
-                               id="registerPassword"
-                               placeholder="Password"
-                               required>
-
-                        <input type="password" 
-                               class="input-field" 
-                               name="password_confirmation" 
-                               id="confirmPassword"
-                               placeholder="Confirm Password"
-                               required>
-                        
-                        <p class="privacy-text">By signing up, you agree to our <a href="#">Terms & Conditions</a></p>
-                        <button type="submit" class="submit-btn">Register</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
 <script>
     function validateLoginForm() {
         let email = document.getElementById('loginEmail').value;
         let password = document.getElementById('loginPassword').value;
-        if (!email || !password) {
-            alert('Please fill in all fields');
-            return false;
+        let isValid = true;
+        let errors = [];
+
+        if (!email) {
+            errors.push('Email is required');
+            isValid = false;
+        } else if (!isValidEmail(email)) {
+            errors.push('Please enter a valid email address');
+            isValid = false;
         }
-        return true;
+
+        if (!password) {
+            errors.push('Password is required');
+            isValid = false;
+        }
+
+        if (!isValid) {
+            showErrors(errors);
+        }
+
+        return isValid;
     }
 
     function validateRegisterForm() {
-        let password = document.getElementById('registerPassword').value;
-        let confirmPassword = document.getElementById('confirmPassword').value;
+        let name = document.getElementById('name')?.value;
+        let email = document.getElementById('email')?.value;
+        let password = document.getElementById('registerPassword')?.value;
+        let confirmPassword = document.getElementById('confirmPassword')?.value;
+        let isValid = true;
+        let errors = [];
+
+        if (!name) {
+            errors.push('Name is required');
+            isValid = false;
+        }
+
+        if (!email) {
+            errors.push('Email is required');
+            isValid = false;
+        } else if (!isValidEmail(email)) {
+            errors.push('Please enter a valid email address');
+            isValid = false;
+        }
+
+        if (!password) {
+            errors.push('Password is required');
+            isValid = false;
+        } else if (password.length < 8) {
+            errors.push('Password must be at least 8 characters long');
+            isValid = false;
+        }
+
+        if (!confirmPassword) {
+            errors.push('Please confirm your password');
+            isValid = false;
+        }
 
         if (password !== confirmPassword) {
-            alert('Passwords do not match!');
-            return false;
+            errors.push('Passwords do not match');
+            isValid = false;
         }
-        return true;
+
+        if (!isValid) {
+            showErrors(errors);
+        }
+
+        return isValid;
     }
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    function showErrors(errors) {
+        let errorMessage = errors.join('\n');
+        alert(errorMessage);
+    }
+
+    // Clear validation errors when input changes
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputs = document.querySelectorAll('.input-field');
+        inputs.forEach(input => {
+            input.addEventListener('input', function() {
+                this.classList.remove('is-invalid');
+                const feedbackElement = this.nextElementSibling;
+                if (feedbackElement && feedbackElement.classList.contains('invalid-feedback')) {
+                    feedbackElement.style.display = 'none';
+                }
+            });
+        });
+    });
 </script>
 @endsection
-</body>
