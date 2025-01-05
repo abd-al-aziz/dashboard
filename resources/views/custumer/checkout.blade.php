@@ -54,31 +54,31 @@
         </div>
 
         <div class="card">
-            <h2>Registered Pets</h2>
-            @foreach($pets as $pet)
-    <input type="radio" name="pet_option" id="pet{{$pet->id}}" value="existing_pet" data-pet-id="{{$pet->id}}">
+    <h2>Registered Pets</h2>
     <div class="pets-grid">
-        <label for="pet{{$pet->id}}" class="pet-card">
-            <img src="{{ asset('storage/'.$pet->image) }}" alt="{{$pet->name}}" class="pet-image">
+        @foreach($pets as $pet)
+            <input type="radio" name="pet_option" id="pet{{$pet->id}}" value="existing_pet" data-pet-id="{{$pet->id}}">
+            <label for="pet{{$pet->id}}" class="pet-card">
+                <img src="{{ asset('storage/'.$pet->image) }}" alt="{{$pet->name}}" class="pet-image">
+                <div class="pet-info">
+                    <h3>{{$pet->name}}</h3>
+                    <p>{{$pet->age}} Years</p>
+                </div>
+            </label>
+        @endforeach
+
+        <!-- Radio button for adding a new pet -->
+        <input type="radio" name="pet_option" id="add_new_pet" value="new_pet">
+        <label for="add_new_pet" class="pet-card">
             <div class="pet-info">
-                <h3>{{$pet->name}}</h3>
-                <p>{{$pet->age}} Years</p>
+                <h3>Add a New Pet</h3>
             </div>
         </label>
     </div>
-    @endforeach
+</div>
 
-            <!-- Radio button for adding a new pet -->
-            <input type="radio" name="pet_option" id="add_new_pet" value="new_pet">
-            <label for="add_new_pet" class="pet-card">
-                <div class="pets-grid">
-                    <div class="pet-info">
-                        <h3>Add a New Pet</h3>
-                    </div>
-                </div>
-            </label>
-        </div>
-        <input type="hidden" name="pet_id" id="pet_id" value="{{$pet->id}}">
+<!-- Hidden field for selected pet_id -->
+<input type="hidden" name="pet_id" id="pet_id" value="">
 
         <!-- Form for adding a new pet -->
         <div class="card" id="new_pet_form" style="display: none;">

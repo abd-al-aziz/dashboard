@@ -44,7 +44,7 @@
                           </div>
                           <ul class="social-icon">
                             <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.instagram.com/mau_arabian_cat?igsh=MThkY2VraTR5ZGh4MQ=="><i class="fa-brands fa-instagram"></i></a></li>
                           </ul>
                       </div>
                     </div>

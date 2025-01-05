@@ -14,7 +14,7 @@
                         <div class="hero-two-text">
                             <h1>Loving Care For Your Pets</h1><br>
                             <br><p>cat hotel provides the best staying and boarding service in healthy and comfortable environment.</p>
-                            <a href="contact.html" class="button">Get Booking</a>
+                            <a href="{{ route('rooms') }}" class="button">Get Booking</a>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <figure>
-                <img src="assets/img/room-4.jpg" alt="Room">
+                <img src="assets/img/room-5.jpg" alt="Room">
             </figure>
         </div>
     </div>
@@ -92,7 +92,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="pets">
-                        <img src="assets/img/g-7.jpg" alt="pets" class="img-fluid">
+                        <img src="assets/img/g-6.jpg" alt="pets" class="img-fluid">
                         <h3><a href="#">Cindy</a></h3>
                         <h6>Britich</h6>
                         <span>1 years</span>
